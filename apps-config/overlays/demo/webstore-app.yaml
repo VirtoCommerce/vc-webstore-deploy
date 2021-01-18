@@ -13,7 +13,7 @@ spec:
     server: https://kubernetes.default.svc
   project: prod-tenant
   source:
-    path: webstore/overlays/qa
+    path: webstore-app/overlays/qa
     repoURL: https://github.com/VirtoCommerce/vc-webstore-deploy
     targetRevision: HEAD
   syncPolicy:

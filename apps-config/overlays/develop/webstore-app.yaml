@@ -13,7 +13,7 @@ spec:
     server: 'https://aks-f783f1e0.hcp.westus.azmk8s.io:443'
   project: tenant
   source:
-    path: webstore/overlays/develop
+    path: webstore-app/overlays/develop
     repoURL: https://github.com/VirtoCommerce/vc-webstore-deploy
     targetRevision: develop
   syncPolicy:
