@@ -5,15 +5,13 @@ metadata:
   namespace: argocd
   finalizers:
     - resources-finalizer.argocd.argoproj.io
-  annotations:
-    argocd.argoproj.io/manifest-generate-paths: . ; ../../../common-base; ../../resources  
 spec:
   destination:
     namespace: develop
     server: 'https://aks-f783f1e0.hcp.westus.azmk8s.io:443'
   project: tenant
   source:
-    path: webstore/overlays/develop
+    path: webstore-app/overlays/develop
     repoURL: https://github.com/VirtoCommerce/vc-webstore-deploy
     targetRevision: develop
   syncPolicy:

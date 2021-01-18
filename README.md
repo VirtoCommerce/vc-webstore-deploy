@@ -1,12 +1,14 @@
 # Virtocommerce webstore kubernetes Deployments
-
+Webstore DEV [![App Status](https://argo.govirto.com/api/badge?name=webstore-develop&revision=true)](https://argo.govirto.com/applications/webstore-develop)
+Webstore QA [![App Status](https://argo.govirto.com/api/badge?name=webstore-qa&revision=true)](https://argo.govirto.com/applications/webstore-qa) 
+Webstore DEMO [![App Status](https://cd.govirto.com/api/badge?name=webstore-app-demo&revision=true)](https://cd.govirto.com/applications/webstore-app-demo) 
 ## Overview
 
 There are 3 branches:
 
-- master - used for development 
+- master - where demo environments are setup 
 - qa - used by QA team to test specific releases
-- demo - where demo environments are setup
+- develop - used for development
 
 ## How to deploy into development environment
 
