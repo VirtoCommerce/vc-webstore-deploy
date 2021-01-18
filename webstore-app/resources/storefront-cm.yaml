@@ -9,5 +9,5 @@ data:
     SnapshotCollectorConfiguration__IsEnabled: "false"
     Swagger__UI__Enable: "true"
     VirtoCommerce__Endpoint__Url: https://$(VC_PLATFORM_SERVICE).$(VC_NAMESPACE).govirto.com
-    AppId: null
-    SecretKey: null
+    AppId: "null"
+    SecretKey: "null"
