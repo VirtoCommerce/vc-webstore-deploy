@@ -11,3 +11,4 @@ data:
     VirtoCommerce__Endpoint__Url: https://$(VC_PLATFORM_SERVICE).$(VC_NAMESPACE).govirto.com
     AppId: null
     SecretKey: null
+    Test: "test"
