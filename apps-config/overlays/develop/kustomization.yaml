@@ -2,6 +2,8 @@ apiVersion: kustomize.config.k8s.io/v1beta1
 kind: Kustomization
 nameSuffix: -develop
 resources:
-- ../../base
-patchesStrategicMerge:
 - webstore-app.yaml
+# - ../../base
+# - error-page.yaml
+# patchesStrategicMerge:
+# - webstore-app.yaml
