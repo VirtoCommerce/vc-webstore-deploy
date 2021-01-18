@@ -11,10 +11,24 @@ resources:
 configMapGenerator:
 - name: db-config
   literals:
-    - VC_DB_HOST=vc-prod-dbserver.database.windows.net
-    - VC_DB=vc-prod-dbserver
-    - VC_DB_POOL=vc-prod-elasticpool
+    - VC_DB_HOST=vc-dev-dbserver.database.windows.net
+    - VC_DB=vc-dev-dbserver
+    - VC_DB_POOL=vc-dev-elasticpool
     - VC_DB_USER=virto
+- name: overlay-config
+  literals:
+    - APPINSIGHTS_INSTRUMENTATIONKEY="4122074c-f2ad-489b-811f-d557350fb644"
+
+patches:
+- patch: |-
+    - op: add
+      path: /spec/template/spec/nodeSelector
+      value: 
+        environmnet: trial
+  target:
+    group: apps
+    version: v1
+    kind: Deployment
 
 vars:
 - name: VC_DB_HOST

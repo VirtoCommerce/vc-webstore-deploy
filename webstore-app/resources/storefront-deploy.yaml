@@ -10,6 +10,11 @@ spec:
     spec:
         containers:
         - name: vc-storefront-web
+          envFrom:
+          - configMapRef:
+              name: storefront-cm
+          - configMapRef:
+              name: overlay-config
           volumeMounts:
             - mountPath: /opt/virtocommerce/storefront/wwwroot/cms-content
               name: cms-content-data

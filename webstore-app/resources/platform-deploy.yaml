@@ -3,11 +3,15 @@ kind: Deployment
 metadata:
   name: platform
 spec:
-  replicas: 1
+  replicas: 2
   template:
     metadata:
         annotations:
-          vault.hashicorp.com/agent-configmap: "sandbox-platform-secret-configmap"
+          reloader.stakater.com/search: "true"
+          configmap.reloader.stakater.com/reload: "webstore-platform-cm, webstore-deployment-cm, webstore-platform-secret-configmap"
+          vault.hashicorp.com/agent-inject: "true"
+          vault.hashicorp.com/agent-pre-populate-only: "true"
+          vault.hashicorp.com/agent-configmap: "webstore-platform-secret-configmap"
           vault.hashicorp.com/agent-requests-cpu: "25m"
           vault.hashicorp.com/agent-limits-cpu: "50m"   
     spec:
@@ -18,11 +22,16 @@ spec:
               value: webstore-platform_source
       containers:
         - name: vc-platform-web
-          # resources:
-          #   requests:
-          #     memory: "256Mi"
-          #   limits:
-          #     memory: "512Mi"
+          resources:
+            requests:
+              memory: "256Mi"
+            limits:
+              memory: "512Mi"
+          envFrom:
+          - configMapRef:
+              name: platform-cm
+          - configMapRef:
+              name: overlay-config
       nodeSelector:
         agentpool: applications
   strategy:
