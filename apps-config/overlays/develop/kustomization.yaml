@@ -3,6 +3,5 @@ kind: Kustomization
 nameSuffix: -develop
 resources:
 - ../../base
-- error-page.yaml
 patchesStrategicMerge:
 - webstore-app.yaml

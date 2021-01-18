@@ -6,6 +6,7 @@ patchesStrategicMerge:
 - platform-deploy.yaml
 - deployment-cm.yaml
 - storefront-cm.yaml
+- platform-secrets.yaml
 - platform-cm.yaml
 - ingress-https.yaml
 - ingress.yaml
