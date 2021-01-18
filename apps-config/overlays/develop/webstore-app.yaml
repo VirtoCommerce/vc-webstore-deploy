@@ -5,8 +5,8 @@ metadata:
   namespace: argocd
   finalizers:
     - resources-finalizer.argocd.argoproj.io
-  annotations:
-    argocd.argoproj.io/manifest-generate-paths: . ; ../../resources  
+  # annotations:
+  #   argocd.argoproj.io/manifest-generate-paths: . ; ../../resources  
 spec:
   destination:
     namespace: develop
