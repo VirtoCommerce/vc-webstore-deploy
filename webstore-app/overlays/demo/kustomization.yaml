@@ -15,6 +15,20 @@ configMapGenerator:
     - VC_DB=vc-prod-dbserver
     - VC_DB_POOL=vc-prod-elasticpool
     - VC_DB_USER=virto
+- name: overlay-config
+  literals:
+    - APPINSIGHTS_INSTRUMENTATIONKEY="f60031ba-a752-4178-90b3-4bf05b631a19"
+
+patches:
+- patch: |-
+    - op: add
+      path: /spec/template/spec/nodeSelector
+      value: 
+        agentpool: applications
+  target:
+    group: apps
+    version: v1
+    kind: Deployment
 
 vars:
 - name: VC_DB_HOST
