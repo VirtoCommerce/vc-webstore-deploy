@@ -11,7 +11,7 @@ spec:
   destination:
     namespace: demo
     server: https://kubernetes.default.svc
-  project: tenant
+  project: prod-tenant
   source:
     path: error-page
     repoURL: https://github.com/VirtoCommerce/vc-webstore-deploy
