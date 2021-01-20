@@ -41,3 +41,10 @@ spec:
           env:
             - name: VC_SAMPLE_DATA_DB
               value: public-platform_demo_src
+      containers:
+        - name: vc-platform-web
+          command:
+            - "/bin/bash"
+            - "-c"
+          args:
+            - "sleep 3m && dotnet VirtoCommerce.Platform.Web.dll"
