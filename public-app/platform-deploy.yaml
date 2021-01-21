@@ -43,9 +43,16 @@ spec:
               value: public-platform_demo_src
       containers:
         - name: vc-platform-web
+          readinessProbe:
+            httpGet:
+              path: /
+              port: 80
+            failureThreshold: 3
+            successThreshold: 1
+            initialDelaySeconds: 10
+            periodSeconds: 5
           command:
             - "/bin/bash"
             - "-c"
           args:
-            - "source /vault/secrets/config_base && source /vault/secrets/config_custom && dotnet VirtoCommerce.Platform.Web.dll"
-#sleep 3m && 
+            - "source /vault/secrets/config_base && source /vault/secrets/config_custom && sleep 3m && dotnet VirtoCommerce.Platform.Web.dll" 
