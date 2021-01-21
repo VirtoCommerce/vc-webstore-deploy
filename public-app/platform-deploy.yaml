@@ -47,4 +47,5 @@ spec:
             - "/bin/bash"
             - "-c"
           args:
-            - "sleep 3m && dotnet VirtoCommerce.Platform.Web.dll"
+            - "dotnet VirtoCommerce.Platform.Web.dll"
+#sleep 3m && 

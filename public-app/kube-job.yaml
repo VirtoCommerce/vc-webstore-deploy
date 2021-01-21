@@ -61,9 +61,9 @@ spec:
         command:
           - "/opt/mssql-tools/bin/sqlcmd"
           - "-S"
-          - "vc-dev-dbserver.database.windows.net"
+          - "$(VC_DB_HOST)"
           - "-U"
-          - "virto@vc-dev-dbserver"
+          - "$(VC_DB_USER)@$(VC_DB)"
           - "-P"
           - "$(VC_DBSERVER_MASTER_PASSWORD)"
           - "-q"
