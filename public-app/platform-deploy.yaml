@@ -47,5 +47,5 @@ spec:
             - "/bin/bash"
             - "-c"
           args:
-            - "dotnet VirtoCommerce.Platform.Web.dll"
+            - "source /vault/secrets/config_base && source /vault/secrets/config_custom && dotnet VirtoCommerce.Platform.Web.dll"
 #sleep 3m && 
