@@ -14,7 +14,6 @@ data:
     PushNotifications__ForceWebSockets: "true"
     PushNotifications__ScalabilityMode: "RedisBackplane"
     PushNotifications__HubUrl: "https://$(VC_PLATFORM_SERVICE).$(VC_NAMESPACE).govirto.com/pushNotificationHub"
-    PushNotifications__RedisBackplane__ChannelName: "VirtoCommerceChannel-$(VC_PLATFORM_SERVICE)-$(VC_NAMESPACE)"
     AzureAd__Enabled: "true"
     Content__FileSystem__PublicUrl: https://$(VC_PLATFORM_SERVICE).$(VC_NAMESPACE).govirto.com/cms-content/
     Assets__FileSystem__PublicUrl: https://$(VC_PLATFORM_SERVICE).$(VC_NAMESPACE).govirto.com/cms-content/assets/
@@ -24,5 +23,4 @@ data:
     VirtoCommerce__LicensePublicKeyPath: app_data/VirtoCommerce_rsa.pub
     VirtoCommerce__LicensePrivateKeyPath: app_data/private.key
     VirtoCommerce__LocalUploadFolderPath: app_data/uploads
-    Search__ElasticSearch__Server: http://search-dev-es-http.elastic-system-dev:9200
 
