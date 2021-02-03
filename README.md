@@ -3,7 +3,7 @@ Webstore DEV [![App Status](https://argo.govirto.com/api/badge?name=webstore-dev
 
 Webstore QA [![App Status](https://argo.govirto.com/api/badge?name=webstore-qa&revision=true)](https://argo.govirto.com/applications/webstore-qa) 
 
-Webstore DEMO [![App Status](https://cd.govirto.com/api/badge?name=webstore-app-demo&revision=true)](https://cd.govirto.com/applications/webstore-app-demo) 
+Webstore DEMO [![App Status](https://argo.govirto.com/api/badge?name=webstore-demo&revision=true)](https://argo.govirto.com/applications/webstore-demo) 
 ## Overview
 
 There are 3 branches:
