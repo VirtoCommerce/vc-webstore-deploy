@@ -16,8 +16,7 @@ configMapGenerator:
     - VC_DB_POOL=vc-dev-elasticpool
     - VC_DB_USER=virto
 - name: overlay-config
-  files:
-  - platform-overlay.properties
+  env: platform-overlay.properties
 
 patches:
 - patch: |-
