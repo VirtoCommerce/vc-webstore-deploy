@@ -15,6 +15,12 @@ configMapGenerator:
     - VC_DB=vc-prod-dbserver
     - VC_DB_POOL=vc-prod-elasticpool
     - VC_DB_USER=virto
+- name: platform-overlay-config
+  envs: 
+    - platform-overlay.env
+- name: storefront-overlay-config
+  envs: 
+    - storefront-overlay.env
 
 vars:
 - name: VC_DB_HOST
