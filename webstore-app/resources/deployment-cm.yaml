@@ -5,7 +5,7 @@ metadata:
 data:
   ELECTRONICS_THEME_URL: https://vc3prerelease.blob.core.windows.net/packages/vc-demo-theme-default-1.6.0-alpha.967.zip
   ELECTRONICS_THEME_LOCATION: /mnt/cms-content/Themes/Electronics
-  B2B_THEME_URL: https://vc3prerelease.blob.core.windows.net/packages/vc-demo-theme-b2b-1.9.0-alpha.1618-dev.zip
+  B2B_THEME_URL: https://vc3prerelease.blob.core.windows.net/packages/vc-demo-theme-b2b-1.9.0-alpha.1620.zip
   B2B_THEME_LOCATION: /mnt/cms-content/Themes/B2B-store
   ASSETS_URL: https://vcbacpac.blob.core.windows.net/dac-packages/webstore_assets_2.zip
   ASSETS_LOCATION: /mnt/cms-content
@@ -179,12 +179,12 @@ data:
       {
         "Id": "VirtoCommerce.ExperienceApi",
         "Repository": "VirtoCommerce/vc-module-experience-api",
-        "PackageUrl": "https://github.com/VirtoCommerce/vc-module-experience-api/releases/download/0.11.0/VirtoCommerce.ExperienceApi_0.11.0.zip"
+        "PackageUrl": "https://github.com/VirtoCommerce/vc-module-experience-api/releases/download/0.21.0/VirtoCommerce.ExperienceApi_0.21.0.zip"
       },
       {
         "Id": "VirtoCommerce.DemoSolutionFeatures",
         "Repository": "VirtoCommerce/vc-module-demo-features",
-        "PackageUrl": "https://vc3prerelease.blob.core.windows.net/packages/VirtoCommerce.DemoSolutionFeaturesModule_1.8.0-alpha.208-dev.zip"
+        "PackageUrl": "https://vc3prerelease.blob.core.windows.net/packages/VirtoCommerce.DemoSolutionFeaturesModule_1.9.0-alpha.213-dev.zip"
       },
       {
         "Id": "VirtoCommerce.DemoCustomerSegmentsModule",
