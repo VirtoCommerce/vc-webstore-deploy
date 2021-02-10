@@ -31,7 +31,7 @@ spec:
           - configMapRef:
               name: platform-cm
           - configMapRef:
-              name: overlay-config
+              name: platform-overlay-config
       nodeSelector:
         agentpool: applications
   strategy:
