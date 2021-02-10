@@ -7,13 +7,13 @@ metadata:
     - resources-finalizer.argocd.argoproj.io
 spec:
   destination:
-    namespace: develop
+    namespace: dev
     server: 'https://aks-f783f1e0.hcp.westus.azmk8s.io:443'
   project: tenant
   source:
-    path: webstore-app/overlays/develop
+    path: webstore-app/overlays/dev
     repoURL: https://github.com/VirtoCommerce/vc-webstore-deploy
-    targetRevision: develop
+    targetRevision: dev
   syncPolicy:
     automated:
       prune: true
