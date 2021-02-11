@@ -1,5 +1,5 @@
 # Virtocommerce webstore kubernetes Deployments
-Webstore DEV [![App Status](https://argo.govirto.com/api/badge?name=webstore-develop&revision=true)](https://argo.govirto.com/applications/webstore-develop)
+Webstore DEV [![App Status](https://argo.govirto.com/api/badge?name=webstore-dev&revision=true)](https://argo.govirto.com/applications/webstore-dev)
 
 Webstore QA [![App Status](https://argo.govirto.com/api/badge?name=webstore-qa&revision=true)](https://argo.govirto.com/applications/webstore-qa) 
 
