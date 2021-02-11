@@ -15,9 +15,12 @@ configMapGenerator:
     - VC_DB=vc-prod-dbserver
     - VC_DB_POOL=vc-prod-elasticpool
     - VC_DB_USER=virto
-- name: overlay-config
-  literals:
-    - APPINSIGHTS_INSTRUMENTATIONKEY="f60031ba-a752-4178-90b3-4bf05b631a19"
+- name: platform-overlay-config
+  envs: 
+    - platform-overlay.env
+- name: storefront-overlay-config
+  envs: 
+    - storefront-overlay.env
 
 patches:
 - patch: |-
