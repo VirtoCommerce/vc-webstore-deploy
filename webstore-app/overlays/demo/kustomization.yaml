@@ -21,6 +21,9 @@ configMapGenerator:
 - name: storefront-overlay-config
   envs: 
     - storefront-overlay.env
+- name: vault-config
+  literals:
+    - VAULT_API_URL=http://hashicorp-vault.vault.svc.cluster.local:8200
 
 patches:
 - patch: |-
@@ -62,3 +65,10 @@ vars:
     apiVersion: v1
   fieldref:
     fieldpath: data['VC_DB_USER']
+- name: VAULT_API_URL
+  objref:
+    kind: ConfigMap
+    name: vault-config
+    apiVersion: v1
+  fieldref:
+    fieldpath: data['VAULT_API_URL']
