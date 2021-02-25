@@ -48,9 +48,19 @@ patches:
       value: 
         containername: webstore-cms-content-qa
         skuName: Premium_LRS
+    - op: replace
+      path: /metadata/name
+      value: webstore-cms-content-qa
   target:
     version: v1
     kind: PersistentVolume
+- patch: |-
+    - op: replace
+      path: /spec/volumeName
+      value: webstore-cms-content-qa
+  target:
+    version: v1
+    kind: PersistentVolumeClaim
 
 vars:
 - name: VC_DB_HOST
