@@ -57,7 +57,7 @@ patches:
 - patch: |-
     - op: replace
       path: /spec/volumeName
-      value: cms-content-qa
+      value: webstore-cms-content-qa
   target:
     version: v1
     kind: PersistentVolumeClaim
