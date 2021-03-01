@@ -1,6 +1,6 @@
 resources:
-- ingress.yaml
 - storage.yaml
+- ingress.yaml
 - platform-cm.yaml
 - platform-deploy.yaml
 - platform-service.yaml
