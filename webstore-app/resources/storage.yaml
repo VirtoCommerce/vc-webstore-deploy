@@ -21,6 +21,6 @@ spec:
     - ReadWriteMany
   resources:
     requests:
-      storage: 200Mi
+      storage: 300Mi
   volumeName: cms-content
   storageClassName: "blob-premium"
