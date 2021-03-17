@@ -16,7 +16,7 @@ data:
     PushNotifications__ScalabilityMode: "RedisBackplane"
     PushNotifications__HubUrl: "https://$(VC_PLATFORM_SERVICE).$(VC_NAMESPACE).govirto.com/pushNotificationHub"
     PushNotifications__RedisBackplane__ChannelName: "VirtoCommerceChannel-$(VC_PLATFORM_SERVICE)-$(VC_NAMESPACE)"
-    AzureAd__Enabled: true
+    AzureAd__Enabled: "true"
     Content__FileSystem__PublicUrl: https://$(VC_PLATFORM_SERVICE).$(VC_NAMESPACE).govirto.com/cms-content/
     Assets__FileSystem__PublicUrl: https://$(VC_PLATFORM_SERVICE).$(VC_NAMESPACE).govirto.com/cms-content/assets/
     VC_STORE_URL_ELECTRONICS: https://$(VC_STOREFRONT_SERVICE).$(VC_NAMESPACE).govirto.com/
