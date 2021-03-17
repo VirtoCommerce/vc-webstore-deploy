@@ -49,7 +49,7 @@ data:
       {
         "Id": "VirtoCommerce.Export",
         "Repository": "VirtoCommerce/vc-module-export",
-        "PackageUrl": "https://github.com/VirtoCommerce/vc-module-export/releases/download/3.10.0/VirtoCommerce.Export_3.10.0.zip"
+        "PackageUrl": "https://devsteamsta.blob.core.windows.net/solution/VirtoCommerce.Export_3.11.0.zip"
       },
       {
         "Id": "VirtoCommerce.ImageTools",
@@ -89,7 +89,7 @@ data:
       {
         "Id": "VirtoCommerce.Pricing",
         "Repository": "VirtoCommerce/vc-module-pricing",
-        "PackageUrl": "https://devsteamsta.blob.core.windows.net/solution/VirtoCommerce.Pricing_3.19.0.zip"
+        "PackageUrl": "https://vc3prerelease.blob.core.windows.net/packages/VirtoCommerce.Pricing_3.19.0-alpha.506-vds-656.zip"
       },
       {
         "Id": "VirtoCommerce.Search",
