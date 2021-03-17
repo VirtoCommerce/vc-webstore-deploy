@@ -5,7 +5,7 @@ metadata:
   annotations:
     kubernetes.io/ingress.class: traefik
     traefik.ingress.kubernetes.io/router.tls: "true"
-    traefik.ingress.kubernetes.io/router.middlewares: prod-errorpage@kubernetescrd, $(VC_NAMESPACE)-$(VC_INSTANCE)-https-redirect@kubernetescrd, $(VC_NAMESPACE)-$(VC_INSTANCE)-rewrite@kubernetescrd
+    traefik.ingress.kubernetes.io/router.middlewares: prod-errorpage@kubernetescrd, $(VC_NAMESPACE)-$(VC_INSTANCE)-https-redirect@kubernetescrd, $(VC_NAMESPACE)-$(VC_INSTANCE)-rewrite@kubernetescrd, argocd-ratelimit@kubernetescrd
 spec:
   tls:
     - hosts:
