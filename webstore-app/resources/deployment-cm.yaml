@@ -189,6 +189,6 @@ data:
       {
         "Id": "VirtoCommerce.DemoCustomerSegmentsModule",
         "Repository": "VirtoCommerce/vc-module-demo-customer-segments",
-        "PackageUrl": "https://vc3prerelease.blob.core.windows.net/packages/VirtoCommerce.DemoCustomerSegmentsModule_1.4.0-alpha.26.zip"
+        "PackageUrl": "https://vc3prerelease.blob.core.windows.net/packages/VirtoCommerce.DemoCustomerSegmentsModule_1.5.0-alpha.27.zip"
       }
     ] 
