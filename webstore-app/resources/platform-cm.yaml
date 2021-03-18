@@ -23,4 +23,5 @@ data:
     VirtoCommerce__LicensePublicKeyPath: app_data/VirtoCommerce_rsa.pub
     VirtoCommerce__LicensePrivateKeyPath: app_data/private.key
     VirtoCommerce__LocalUploadFolderPath: app_data/uploads
+    Pricing__SimpleExport__LimitOfLines: "30"
 
