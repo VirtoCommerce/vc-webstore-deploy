@@ -20,4 +20,4 @@ images:
   newTag: 3.49.0-master-182936ca
 - name: docker.pkg.github.com/virtocommerce/vc-storefront/storefront
   newName: docker.pkg.github.com/virtocommerce/vc-demo-storefront/demo-storefront
-  newTag: 1.10.0-alpha.1012-upstream-dev-672f462a
+  newTag: 1.11.0-alpha.1017-vds-1067-e7ccc598
