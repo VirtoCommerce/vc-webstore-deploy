@@ -182,9 +182,14 @@ data:
         "PackageUrl": "https://github.com/VirtoCommerce/vc-module-experience-api/releases/download/0.26.0/VirtoCommerce.ExperienceApi_0.26.0.zip"
       },
       {
+        "Id": "VirtoCommerce.FeatureManagement",
+        "Repository": "VirtoCommerce/vc-module-feature-flags",
+        "PackageUrl": "https://vc3prerelease.blob.core.windows.net/packages/VirtoCommerce.FeatureManagement_3.0.0-preview.1.zip"
+      },
+      {
         "Id": "VirtoCommerce.DemoSolutionFeatures",
         "Repository": "VirtoCommerce/vc-module-demo-features",
-        "PackageUrl": "https://vc3prerelease.blob.core.windows.net/packages/VirtoCommerce.DemoSolutionFeaturesModule_1.11.0-alpha.231-vds-1136.zip"
+        "PackageUrl": "https://vc3prerelease.blob.core.windows.net/packages/VirtoCommerce.DemoSolutionFeaturesModule_1.12.0-alpha.231-vds-1178.zip"
       },
       {
         "Id": "VirtoCommerce.DemoCustomerSegmentsModule",
