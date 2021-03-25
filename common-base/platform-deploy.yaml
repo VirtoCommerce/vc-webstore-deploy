@@ -54,10 +54,7 @@ spec:
           - "-c"
         args:
           - "echo START INIT $(date +%Y-%m-%d-%H-%M-%S)
-          && python3 install-modules.py \"$MODULES_CONFIG\" /mnt/Modules/*
-          && python3 installer.py $(ELECTRONICS_THEME_URL) $(ELECTRONICS_THEME_LOCATION)
-          && python3 installer.py $(B2B_THEME_URL) $(B2B_THEME_LOCATION)
-          && python3 installer.py $(ASSETS_URL) $(ASSETS_LOCATION)"
+          && python3 install-modules.py \"$MODULES_CONFIG\" /mnt/Modules/*"
         env:
           - name: MODULES_CONFIG
             valueFrom:
