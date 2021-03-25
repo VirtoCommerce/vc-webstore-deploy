@@ -183,11 +183,6 @@ data:
       "Id": "VirtoCommerce.DynamicAssociations",
       "Repository": "VirtoCommerce/vc-module-dynamic-associations",
       "PackageUrl": "https://github.com/VirtoCommerce/vc-module-dynamic-associations/releases/download/3.2.0/VirtoCommerce.DynamicAssociationsModule_3.2.0.zip"
-    },
-    {
-      "Id": "VirtoCommerce.SimpleExportImport",
-      "Repository": "VirtoCommerce/vc-module-simple-export-import",
-      "PackageUrl": "https://vc3prerelease.blob.core.windows.net/packages/VirtoCommerce.SimpleExportImport_0.0.1-preview-alpha.6-dev.zip"
     }
    ]
   
