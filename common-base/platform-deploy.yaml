@@ -54,24 +54,16 @@ spec:
           - "-c"
         args:
           - "echo START INIT $(date +%Y-%m-%d-%H-%M-%S)
-          && python3 install-modules.py \"$MODULES_CONFIG\" /mnt/Modules/*
-          && python3 installer.py $(ELECTRONICS_THEME_URL) $(ELECTRONICS_THEME_LOCATION)
-          && python3 installer.py $(B2B_THEME_URL) $(B2B_THEME_LOCATION)
-          && python3 installer.py $(ASSETS_URL) $(ASSETS_LOCATION)"
-        envFrom:
-          - configMapRef:
-              name: deployment-cm
+          && python3 install-modules.py \"$MODULES_CONFIG\" /mnt/Modules/*"
         env:
           - name: MODULES_CONFIG
             valueFrom:
               configMapKeyRef:
-                name: deployment-cm
+                name: modules-cm
                 key: modules.json 
         volumeMounts:
           - mountPath: /mnt/Modules
             name: modules-data
-          - mountPath: /mnt/cms-content
-            name: cms-content-data
       - name: init-dbuser
         image: mcr.microsoft.com/mssql-tools
         command:

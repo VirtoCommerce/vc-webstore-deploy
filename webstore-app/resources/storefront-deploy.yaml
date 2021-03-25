@@ -9,8 +9,33 @@ spec:
         reloader.stakater.com/search: "true"
         configmap.reloader.stakater.com/reload: "webstore-storefront-cm, webstore-platform-cm, webstore-deployment-cm, webstore-platform-secret-configmap"
     spec:
+        initContainers:
+        - name: init-storefront
+          imagePullPolicy: Always
+          image: docker.pkg.github.com/virtocommerce/vc-deploy-containers/platform-installer:v3
+          command:
+            - "/bin/sh"
+            - "-c"
+          args:
+            - "python3 installer.py $(ELECTRONICS_THEME_URL) $(ELECTRONICS_THEME_LOCATION)
+            && python3 installer.py $(B2B_THEME_URL) $(B2B_THEME_LOCATION)
+            && python3 installer.py $(ASSETS_URL) $(ASSETS_LOCATION)"
+          envFrom:
+          - configMapRef:
+              name: deployment-cm 
+          volumeMounts:
+            - mountPath: /mnt/cms-content
+              name: cms-content-data
         containers:
         - name: vc-storefront-web
+          readinessProbe:
+            httpGet:
+              path: /
+              port: 80
+            failureThreshold: 3
+            successThreshold: 1
+            initialDelaySeconds: 5
+            periodSeconds: 1
           envFrom:
           - configMapRef:
               name: storefront-cm
@@ -19,3 +44,8 @@ spec:
           volumeMounts:
             - mountPath: /opt/virtocommerce/storefront/wwwroot/cms-content
               name: cms-content-data
+  strategy:
+    rollingUpdate:
+      maxSurge: 0
+      maxUnavailable: 1
+    type: RollingUpdate
