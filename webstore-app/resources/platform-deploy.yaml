@@ -28,12 +28,17 @@ spec:
             - "-c"
           args:
             - "echo START INIT $(date +%Y-%m-%d-%H-%M-%S)
-            && python3 install-modules.py \"$MODULES_CONFIG\" /mnt/Modules/*
-            && python3 installer.py $(ELECTRONICS_THEME_URL) $(ELECTRONICS_THEME_LOCATION)
-            && python3 installer.py $(B2B_THEME_URL) $(B2B_THEME_LOCATION)
-            && python3 installer.py $(ASSETS_URL) $(ASSETS_LOCATION)"
+            && python3 install-modules.py \"$MODULES_CONFIG\" /mnt/Modules/*"
       containers:
         - name: vc-platform-web
+          readinessProbe:
+            httpGet:
+              path: /
+              port: 80
+            failureThreshold: 3
+            successThreshold: 1
+            initialDelaySeconds: 10
+            periodSeconds: 1
           resources:
             requests:
               memory: "256Mi"
@@ -44,12 +49,10 @@ spec:
               name: platform-cm
           - configMapRef:
               name: platform-overlay-config
-      nodeSelector:
-        agentpool: applications
   strategy:
     rollingUpdate:
-      maxSurge: 1
-      maxUnavailable: 0
+      maxSurge: 0
+      maxUnavailable: 1
     type: RollingUpdate
 
           
