@@ -26,4 +26,6 @@ data:
     VirtoCommerce__LicensePrivateKeyPath: app_data/private.key
     VirtoCommerce__LocalUploadFolderPath: app_data/uploads
     Search__ElasticSearch__Server: http://search-dev-es-http.elastic-system:9200
-    SimpleExportImport__SimpleExport__LimitOfLines: "30"
+    SimpleExportImport__Export__LimitOfLines: "30"
+    SimpleExportImport__Import__LimitOfLines: "30"
+    SimpleExportImport__Import__FileMaxSize: "1"
