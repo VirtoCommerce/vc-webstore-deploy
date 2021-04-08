@@ -3,9 +3,9 @@ apiVersion: v1
 metadata:
   name: deployment-cm
 data:
-  ELECTRONICS_THEME_URL: https://vc3prerelease.blob.core.windows.net/packages/vc-demo-theme-default-1.8.0-alpha.985.zip
+  ELECTRONICS_THEME_URL: https://vc3prerelease.blob.core.windows.net/packages/vc-demo-theme-default-1.7.0-alpha.984-upstream-dev.zip
   ELECTRONICS_THEME_LOCATION: /mnt/cms-content/Themes/Electronics
-  B2B_THEME_URL: https://vc3prerelease.blob.core.windows.net/packages/vc-demo-theme-b2b-1.13.0-alpha.1656.zip
+  B2B_THEME_URL: https://vc3prerelease.blob.core.windows.net/packages/vc-demo-theme-b2b-1.12.0-pr-192-c25eba21.zip
   B2B_THEME_LOCATION: /mnt/cms-content/Themes/B2B-store
   ASSETS_URL: https://vcbacpac.blob.core.windows.net/dac-packages/webstore_assets_4.zip
   ASSETS_LOCATION: /mnt/cms-content/assets
@@ -195,16 +195,17 @@ data:
       {
         "Id": "VirtoCommerce.DemoSolutionFeatures",
         "Repository": "VirtoCommerce/vc-module-demo-features",
-        "PackageUrl": "https://vc3prerelease.blob.core.windows.net/packages/VirtoCommerce.DemoSolutionFeaturesModule_1.12.0-alpha.230.zip"
+        "PackageUrl": "https://vc3prerelease.blob.core.windows.net/packages/VirtoCommerce.DemoSolutionFeaturesModule_1.12.0-alpha.232-vds-1178.zip"
       },
       {
         "Id": "VirtoCommerce.DemoCustomerSegmentsModule",
         "Repository": "VirtoCommerce/vc-module-demo-customer-segments",
-        "PackageUrl": "https://vc3prerelease.blob.core.windows.net/packages/VirtoCommerce.DemoCustomerSegmentsModule_1.5.0-alpha.27.zip"
+        "PackageUrl": "https://vc3prerelease.blob.core.windows.net/packages/VirtoCommerce.DemoCustomerSegmentsModule_1.4.0-alpha.32-vds-1136.zip"
       },
       {
         "Id": "VirtoCommerce.SimpleExportImport",
         "Repository": "VirtoCommerce/vc-module-simple-export-import",
-        "PackageUrl": "https://vc3prerelease.blob.core.windows.net/packages/VirtoCommerce.SimpleExportImport_0.0.1-preview-alpha.25.zip"
+        "PackageUrl": "https://vc3prerelease.blob.core.windows.net/packages/VirtoCommerce.SimpleExportImport_0.0.1-preview-alpha.32-vds-733.zip"
       }
-    ] 
+    ]
+
