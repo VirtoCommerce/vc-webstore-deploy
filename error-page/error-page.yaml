@@ -24,7 +24,7 @@ spec:
           limits:
             memory: 256Mi
       nodeSelector:
-        agentpool: applications
+        agentpool: primary
 ---
 apiVersion: v1
 kind: Service
