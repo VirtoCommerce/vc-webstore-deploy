@@ -5,6 +5,11 @@ metadata:
   namespace: argocd
   finalizers:
     - resources-finalizer.argocd.argoproj.io
+  annotations:
+    notifications.argoproj.io/subscribe.on-health-degraded.msteams-webstore: ""
+    notifications.argoproj.io/subscribe.on-sync-failed.msteams-webstore: ""
+  labels:
+    instance: webstore  
 spec:
   destination:
     namespace: dev
