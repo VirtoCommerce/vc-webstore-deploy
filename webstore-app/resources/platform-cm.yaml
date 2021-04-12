@@ -23,3 +23,6 @@ data:
     VirtoCommerce__LicensePublicKeyPath: app_data/VirtoCommerce_rsa.pub
     VirtoCommerce__LicensePrivateKeyPath: app_data/private.key
     VirtoCommerce__LocalUploadFolderPath: app_data/uploads  
+    SimpleExportImport__Export__LimitOfLines: "30"
+    SimpleExportImport__Import__LimitOfLines: "30"
+    SimpleExportImport__Import__FileMaxSize: "1"
