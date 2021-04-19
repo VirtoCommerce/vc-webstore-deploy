@@ -1,23 +1,20 @@
 apiVersion: kustomize.config.k8s.io/v1beta1
 kind: Kustomization
-
 patchesStrategicMerge:
-- storefront-deploy.yaml
-- platform-deploy.yaml
-- deployment-cm.yaml
-- storefront-cm.yaml
-- platform-secrets.yaml
-- platform-cm.yaml
-- ingress-https.yaml
-- ingress.yaml
-
+  - storefront-deploy.yaml
+  - platform-deploy.yaml
+  - deployment-cm.yaml
+  - storefront-cm.yaml
+  - platform-secrets.yaml
+  - platform-cm.yaml
+  - ingress-https.yaml
+  - ingress.yaml
 resources:
-- ../../common-base
-
+  - ../../common-base
 images:
-- name: docker.pkg.github.com/virtocommerce/vc-platform/platform
-  newName: docker.pkg.github.com/virtocommerce/vc-platform/platform
-  newTag: 3.52.0-master-a84f2a90
-- name: docker.pkg.github.com/virtocommerce/vc-storefront/storefront
-  newName: docker.pkg.github.com/virtocommerce/vc-demo-storefront/demo-storefront
-  newTag: 1.11.0-alpha.1017-vds-1067-e7ccc598
+  - name: docker.pkg.github.com/virtocommerce/vc-platform/platform
+    newName: docker.pkg.github.com/virtocommerce/vc-platform/platform
+    newTag: 3.52.0-master-a84f2a90
+  - name: docker.pkg.github.com/virtocommerce/vc-storefront/storefront
+    newName: docker.pkg.github.com/virtocommerce/vc-demo-storefront/demo-storefront
+    newTag: 1.12.0-pr-64-vds-1223-ba639d7d
