@@ -200,7 +200,7 @@ data:
       {
         "Id": "VirtoCommerce.DemoCustomerSegmentsModule",
         "Repository": "VirtoCommerce/vc-module-demo-customer-segments",
-        "PackageUrl": "https://vc3prerelease.blob.core.windows.net/packages/VirtoCommerce.DemoCustomerSegmentsModule_1.5.0-alpha.32-vds-1478.zip"
+        "PackageUrl": "https://github.com/VirtoCommerce/vc-module-demo-customer-segments/releases/download/1.5.0/VirtoCommerce.DemoCustomerSegmentsModule_1.5.0.zip"
       },
       {
         "Id": "VirtoCommerce.SimpleExportImport",
