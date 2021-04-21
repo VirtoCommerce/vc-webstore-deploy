@@ -1,0 +1,56 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: platform
+spec:
+  replicas: 2
+  template:
+    metadata:
+        annotations:
+          reloader.stakater.com/search: "true"
+          configmap.reloader.stakater.com/reload: "webstore2-platform-cm, webstore2-deployment-cm, webstore2-platform-secret-configmap"
+          vault.hashicorp.com/agent-inject: "true"
+          vault.hashicorp.com/agent-pre-populate-only: "true"
+          vault.hashicorp.com/agent-configmap: "webstore2-platform-secret-configmap"
+          vault.hashicorp.com/agent-requests-cpu: "25m"
+          vault.hashicorp.com/agent-limits-cpu: "50m"   
+    spec:
+      initContainers:
+        - name: init-sqldatabase
+          env:
+            - name: VC_SAMPLE_DATA_DB
+              value: webstore-platform_qa
+        - name: init-platform
+          imagePullPolicy: Always
+          image: docker.pkg.github.com/virtocommerce/vc-deploy-containers/platform-installer:v3
+          command:
+            - "/bin/sh"
+            - "-c"
+          args:
+            - "echo START INIT $(date +%Y-%m-%d-%H-%M-%S)
+            && python3 install-modules.py \"$MODULES_CONFIG\" /mnt/Modules/*"
+      containers:
+        - name: vc-platform-web
+          readinessProbe:
+            httpGet:
+              path: /
+              port: 80
+            failureThreshold: 3
+            successThreshold: 1
+            initialDelaySeconds: 10
+            periodSeconds: 1
+          resources:
+            requests:
+              memory: "256Mi"
+            limits:
+              memory: "512Mi"
+          envFrom:
+          - configMapRef:
+              name: platform-cm
+  strategy:
+    rollingUpdate:
+      maxSurge: 0
+      maxUnavailable: 1
+    type: RollingUpdate
+
+          
