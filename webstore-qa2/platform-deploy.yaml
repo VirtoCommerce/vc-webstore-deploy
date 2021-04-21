@@ -47,8 +47,6 @@ spec:
           envFrom:
           - configMapRef:
               name: platform-cm
-          - configMapRef:
-              name: platform-overlay-config
   strategy:
     rollingUpdate:
       maxSurge: 0
