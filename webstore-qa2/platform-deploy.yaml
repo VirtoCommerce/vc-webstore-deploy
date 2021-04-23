@@ -8,10 +8,10 @@ spec:
     metadata:
         annotations:
           reloader.stakater.com/search: "true"
-          configmap.reloader.stakater.com/reload: "webstore-platform-cm, webstore-deployment-cm, webstore-platform-secret-configmap"
+          configmap.reloader.stakater.com/reload: "webstore2-platform-cm, webstore2-deployment-cm, webstore2-platform-secret-configmap"
           vault.hashicorp.com/agent-inject: "true"
           vault.hashicorp.com/agent-pre-populate-only: "true"
-          vault.hashicorp.com/agent-configmap: "webstore-platform-secret-configmap"
+          vault.hashicorp.com/agent-configmap: "webstore2-platform-secret-configmap"
           vault.hashicorp.com/agent-requests-cpu: "25m"
           vault.hashicorp.com/agent-limits-cpu: "50m"   
     spec:
@@ -19,7 +19,7 @@ spec:
         - name: init-sqldatabase
           env:
             - name: VC_SAMPLE_DATA_DB
-              value: webstore-platform_source
+              value: webstore-platform_qa
         - name: init-platform
           imagePullPolicy: Always
           image: docker.pkg.github.com/virtocommerce/vc-deploy-containers/platform-installer:v3
@@ -47,8 +47,6 @@ spec:
           envFrom:
           - configMapRef:
               name: platform-cm
-          - configMapRef:
-              name: platform-overlay-config
   strategy:
     rollingUpdate:
       maxSurge: 0

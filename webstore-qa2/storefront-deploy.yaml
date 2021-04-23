@@ -7,7 +7,7 @@ spec:
     metadata:
       annotations:
         reloader.stakater.com/search: "true"
-        configmap.reloader.stakater.com/reload: "webstore-storefront-cm, webstore-platform-cm, webstore-deployment-cm, webstore-platform-secret-configmap"
+        configmap.reloader.stakater.com/reload: "webstore2-storefront-cm, webstore2-platform-cm, webstore2-deployment-cm, webstore2-platform-secret-configmap"
     spec:
         initContainers:
         - name: init-storefront
@@ -39,8 +39,6 @@ spec:
           envFrom:
           - configMapRef:
               name: storefront-cm
-          - configMapRef:
-              name: storefront-overlay-config
           volumeMounts:
             - mountPath: /opt/virtocommerce/storefront/wwwroot/cms-content
               name: cms-content-data
