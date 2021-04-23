@@ -31,14 +31,6 @@ spec:
             && python3 install-modules.py \"$MODULES_CONFIG\" /mnt/Modules/*"
       containers:
         - name: vc-platform-web
-          readinessProbe:
-            httpGet:
-              path: /
-              port: 80
-            failureThreshold: 3
-            successThreshold: 1
-            initialDelaySeconds: 10
-            periodSeconds: 1
           resources:
             requests:
               memory: "256Mi"
