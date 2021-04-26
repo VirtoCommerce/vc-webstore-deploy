@@ -8,10 +8,10 @@ spec:
     metadata:
         annotations:
           reloader.stakater.com/search: "true"
-          configmap.reloader.stakater.com/reload: "webstore-platform-cm, webstore-deployment-cm, webstore-platform-secret-configmap"
+          configmap.reloader.stakater.com/reload: "webstore2-platform-cm, webstore2-deployment-cm, webstore2-platform-secret-configmap"
           vault.hashicorp.com/agent-inject: "true"
           vault.hashicorp.com/agent-pre-populate-only: "true"
-          vault.hashicorp.com/agent-configmap: "webstore-platform-secret-configmap"
+          vault.hashicorp.com/agent-configmap: "webstore2-platform-secret-configmap"
           vault.hashicorp.com/agent-requests-cpu: "25m"
           vault.hashicorp.com/agent-limits-cpu: "50m"   
     spec:
@@ -19,7 +19,7 @@ spec:
         - name: init-sqldatabase
           env:
             - name: VC_SAMPLE_DATA_DB
-              value: webstore-platform_source
+              value: webstore-platform_qa
         - name: init-platform
           imagePullPolicy: Always
           image: docker.pkg.github.com/virtocommerce/vc-deploy-containers/platform-installer:v3
@@ -31,6 +31,14 @@ spec:
             && python3 install-modules.py \"$MODULES_CONFIG\" /mnt/Modules/*"
       containers:
         - name: vc-platform-web
+          readinessProbe:
+            httpGet:
+              path: /
+              port: 80
+            failureThreshold: 3
+            successThreshold: 1
+            initialDelaySeconds: 10
+            periodSeconds: 1
           resources:
             requests:
               memory: "256Mi"
@@ -39,8 +47,6 @@ spec:
           envFrom:
           - configMapRef:
               name: platform-cm
-          - configMapRef:
-              name: platform-overlay-config
   strategy:
     rollingUpdate:
       maxSurge: 0

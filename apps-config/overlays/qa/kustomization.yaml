@@ -3,3 +3,4 @@ kind: Kustomization
 nameSuffix: -qa
 resources:
 - webstore-app.yaml
+- webstore-qa2.yaml
