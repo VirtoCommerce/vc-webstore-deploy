@@ -190,7 +190,7 @@ data:
       {
         "Id": "VirtoCommerce.FeatureManagement",
         "Repository": "VirtoCommerce/vc-module-feature-flags",
-        "PackageUrl": "https://vc3prerelease.blob.core.windows.net/packages/VirtoCommerce.FeatureManagement_3.0.0-preview.1.zip"
+        "PackageUrl": "https://github.com/VirtoCommerce/vc-module-feature-flags/releases/download/3.0.0/VirtoCommerce.FeatureManagement_3.0.0.zip"
       },
       {
         "Id": "VirtoCommerce.DemoSolutionFeatures",
@@ -205,6 +205,6 @@ data:
       {
         "Id": "VirtoCommerce.SimpleExportImport",
         "Repository": "VirtoCommerce/vc-module-simple-export-import",
-        "PackageUrl": "https://vc3prerelease.blob.core.windows.net/packages/VirtoCommerce.SimpleExportImport_0.0.1-preview-alpha.37-dev.zip"
+        "PackageUrl": "https://github.com/VirtoCommerce/vc-module-simple-export-import/releases/download/1.0.0/VirtoCommerce.SimpleExportImport_1.0.0.zip"
       }
     ]
