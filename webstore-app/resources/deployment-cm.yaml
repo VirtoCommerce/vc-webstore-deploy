@@ -195,7 +195,7 @@ data:
       {
         "Id": "VirtoCommerce.DemoSolutionFeatures",
         "Repository": "VirtoCommerce/vc-module-demo-features",
-        "PackageUrl": "https://vc3prerelease.blob.core.windows.net/packages/VirtoCommerce.DemoSolutionFeatures_1.13.0-alpha.237.zip"
+        "PackageUrl": "https://vc3prerelease.blob.core.windows.net/packages/VirtoCommerce.DemoSolutionFeatures_1.14.0-alpha.240.zip"
       },
       {
         "Id": "VirtoCommerce.DemoCustomerSegmentsModule",
