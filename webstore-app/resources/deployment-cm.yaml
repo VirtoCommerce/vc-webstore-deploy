@@ -205,6 +205,6 @@ data:
       {
         "Id": "VirtoCommerce.SimpleExportImport",
         "Repository": "VirtoCommerce/vc-module-simple-export-import",
-        "PackageUrl": "https://github.com/VirtoCommerce/vc-module-simple-export-import/releases/download/1.0.0/VirtoCommerce.SimpleExportImport_1.0.0.zip"
+        "PackageUrl": "https://vc3prerelease.blob.core.windows.net/packages/VirtoCommerce.SimpleExportImport_1.0.0-pr-48-4b08ea3c.zip"
       }
     ]
