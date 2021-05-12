@@ -203,8 +203,8 @@ data:
         "PackageUrl": "https://github.com/VirtoCommerce/vc-module-demo-customer-segments/releases/download/1.6.0/VirtoCommerce.DemoCustomerSegments_1.6.0.zip"
       },
       {
-        "Id": "VirtoCommerce.SimpleExportImport",
-        "Repository": "VirtoCommerce/vc-module-simple-export-import",
-        "PackageUrl": "https://vc3prerelease.blob.core.windows.net/packages/VirtoCommerce.SimpleExportImport_1.0.0-pr-49-e2cb7733.zip"
+        "Id": "VirtoCommerce.PriceExportImport",
+        "Repository": "VirtoCommerce/vc-module-price-export-import",
+        "PackageUrl": "https://vc3prerelease.blob.core.windows.net/packages/VirtoCommerce.PriceExportImport_1.1.0-pr-50-a9e6694c.zip"
       }
     ]
