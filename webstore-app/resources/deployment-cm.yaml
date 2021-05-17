@@ -185,7 +185,7 @@ data:
       {
         "Id": "VirtoCommerce.ExperienceApi",
         "Repository": "VirtoCommerce/vc-module-experience-api",
-        "PackageUrl": "https://github.com/VirtoCommerce/vc-module-experience-api/releases/download/1.4.0/VirtoCommerce.ExperienceApi_1.4.0.zip"
+        "PackageUrl": "https://github.com/VirtoCommerce/vc-module-experience-api/releases/download/1.8.0/VirtoCommerce.ExperienceApi_1.8.0.zip"
       },
       {
         "Id": "VirtoCommerce.FeatureManagement",
