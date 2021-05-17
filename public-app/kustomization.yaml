@@ -18,7 +18,7 @@ patchesStrategicMerge:
 resources:
 - ../common-base/public
 - ./traefik/middleware-rewrite.yaml
-#- kube-job.yaml
+- kube-job.yaml
 images:
 - name: docker.pkg.github.com/virtocommerce/vc-platform/platform
   newName: docker.pkg.github.com/virtocommerce/vc-platform/platform
