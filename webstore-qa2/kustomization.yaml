@@ -1,12 +1,9 @@
 apiVersion: kustomize.config.k8s.io/v1beta1
 kind: Kustomization
 namespace: qa
-namePrefix: webstore-
+namePrefix: webstore2-
 commonLabels:
-  instance: webstore
-
-resources:
-- ../../resources
+  instance: webstore2
 
 configMapGenerator:
 - name: db-config
@@ -15,12 +12,6 @@ configMapGenerator:
     - VC_DB=vc-dev-dbserver
     - VC_DB_POOL=vc-dev-elasticpool
     - VC_DB_USER=virto
-- name: platform-overlay-config
-  envs: 
-    - platform-overlay.env
-- name: storefront-overlay-config
-  envs: 
-    - storefront-overlay.env
 - name: vault-config
   literals:
     - VAULT_API_URL=http://vault-dev.vault-dev.svc.cluster.local:8200
@@ -42,25 +33,15 @@ patches:
         driver: blob.csi.azure.com
         readOnly: false
         fsType: ext4 
-        volumeHandle: mc_aks-cluster-dev_aks-dev_westus#fusefdb1fe6c3d1c4b1d814#webstore-cms-content-qa
+        volumeHandle: mc_aks-cluster-dev_aks-dev_westus#fusefdb1fe6c3d1c4b1d814#webstore2-cms-content-qa
     - op: add
       path: /spec/csi/volumeAttributes
       value: 
-        containername: webstore-cms-content-qa
+        containername: webstore2-cms-content-qa
         skuName: Premium_LRS
-    - op: replace
-      path: /metadata/name
-      value: cms-content-qa
   target:
     version: v1
     kind: PersistentVolume
-- patch: |-
-    - op: replace
-      path: /spec/volumeName
-      value: webstore-cms-content-qa
-  target:
-    version: v1
-    kind: PersistentVolumeClaim
 
 vars:
 - name: VC_DB_HOST
@@ -99,3 +80,24 @@ vars:
   fieldref:
     fieldpath: data['VAULT_API_URL']
 
+patchesStrategicMerge:
+- storefront-deploy.yaml
+- platform-deploy.yaml
+- deployment-cm.yaml
+- storefront-cm.yaml
+- platform-secrets.yaml
+- platform-cm.yaml
+- storefront-cm.yaml
+- ingress-https.yaml
+- ingress.yaml
+
+resources:
+- ../common-base
+
+images:
+- name: docker.pkg.github.com/virtocommerce/vc-platform/platform
+  newName: docker.pkg.github.com/virtocommerce/vc-platform/platform
+  newTag: 3.52.0-master-a84f2a90
+- name: docker.pkg.github.com/virtocommerce/vc-storefront/storefront
+  newName: docker.pkg.github.com/virtocommerce/vc-demo-storefront/demo-storefront
+  newTag: 1.11.0-alpha.1017-vds-1067-e7ccc598
