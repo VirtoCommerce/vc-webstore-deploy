@@ -205,6 +205,6 @@ data:
       {
         "Id": "VirtoCommerce.PriceExportImport",
         "Repository": "VirtoCommerce/vc-module-price-export-import",
-        "PackageUrl": "https://github.com/VirtoCommerce/vc-module-price-export-import/releases/download/1.1.0/VirtoCommerce.PriceExportImport_1.1.0.zip"
+        "PackageUrl": "https://vc3prerelease.blob.core.windows.net/packages/VirtoCommerce.PriceExportImport_1.1.0-alpha.47-dev.zip"
       }
     ] 
