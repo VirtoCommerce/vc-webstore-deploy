@@ -95,7 +95,7 @@ data:
       {
         "Id": "VirtoCommerce.Pricing",
         "Repository": "VirtoCommerce/vc-module-pricing",
-        "PackageUrl": "https://github.com/VirtoCommerce/vc-module-pricing/releases/download/3.21.0/VirtoCommerce.Pricing_3.21.0.zip"
+        "PackageUrl": "https://vc3prerelease.blob.core.windows.net/packages/VirtoCommerce.Pricing_3.22.0-alpha.507.zip"
       },
       {
         "Id": "VirtoCommerce.Search",
@@ -205,6 +205,6 @@ data:
       {
         "Id": "VirtoCommerce.PriceExportImport",
         "Repository": "VirtoCommerce/vc-module-price-export-import",
-        "PackageUrl": "https://github.com/VirtoCommerce/vc-module-price-export-import/releases/download/1.1.0/VirtoCommerce.PriceExportImport_1.1.0.zip"
+        "PackageUrl": "https://vc3prerelease.blob.core.windows.net/packages/VirtoCommerce.PriceExportImport_1.1.0-alpha.48.zip"
       }
     ]
