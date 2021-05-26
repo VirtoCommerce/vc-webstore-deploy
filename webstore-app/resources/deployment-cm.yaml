@@ -206,5 +206,11 @@ data:
         "Id": "VirtoCommerce.PriceExportImport",
         "Repository": "VirtoCommerce/vc-module-price-export-import",
         "PackageUrl": "https://vc3prerelease.blob.core.windows.net/packages/VirtoCommerce.PriceExportImport_1.1.0-alpha.48.zip"
+      },
+      {
+        "Id": "VirtoCommerce.CustomerExportImport",
+        "Repository": "VirtoCommerce/vc-module-customer-export-import",
+        "PackageUrl": "https://vc3prerelease.blob.core.windows.net/packages/VirtoCommerce.CustomerExportImport_1.0.0-alpha.13-dev.zip"
       }
+
     ] 
