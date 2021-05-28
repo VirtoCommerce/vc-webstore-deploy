@@ -1,4 +1,4 @@
-kind: ConfigMap
+kind: 
 apiVersion: v1
 metadata:
   name: deployment-cm
