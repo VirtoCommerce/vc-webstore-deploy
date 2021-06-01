@@ -190,7 +190,7 @@ data:
       {
         "Id": "VirtoCommerce.FeatureManagement",
         "Repository": "VirtoCommerce/vc-module-feature-flags",
-        "PackageUrl": "https://github.com/VirtoCommerce/vc-module-feature-flags/releases/download/3.0.0/VirtoCommerce.FeatureManagement_3.0.0.zip"
+        "PackageUrl": "https://vc3prerelease.blob.core.windows.net/packages/VirtoCommerce.FeatureManagement_3.0.0-alpha.22.zip"
       },
       {
         "Id": "VirtoCommerce.DemoSolutionFeatures",
