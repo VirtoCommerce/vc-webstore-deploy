@@ -28,14 +28,17 @@ spec:
               name: cms-content-data
         containers:
         - name: vc-storefront-web
-          # readinessProbe:
-          #   httpGet:
-          #     path: /
-          #     port: 80
-          #   failureThreshold: 3
-          #   successThreshold: 1
-          #   initialDelaySeconds: 5
-          #   periodSeconds: 1
+          readinessProbe:
+            httpGet:
+              path: /
+              port: 80
+              httpHeaders:
+              - name: Health-Check
+                value: "true"
+            failureThreshold: 3
+            successThreshold: 1
+            initialDelaySeconds: 5
+            periodSeconds: 1
           envFrom:
           - configMapRef:
               name: storefront-cm
