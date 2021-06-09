@@ -95,7 +95,7 @@ data:
       {
         "Id": "VirtoCommerce.Pricing",
         "Repository": "VirtoCommerce/vc-module-pricing",
-        "PackageUrl": "https://github.com/VirtoCommerce/vc-module-pricing/releases/download/3.21.0/VirtoCommerce.Pricing_3.21.0.zip"
+        "PackageUrl": "https://vc3prerelease.blob.core.windows.net/packages/VirtoCommerce.Pricing_3.22.0-alpha.507.zip"
       },
       {
         "Id": "VirtoCommerce.Search",
@@ -195,7 +195,7 @@ data:
       {
         "Id": "VirtoCommerce.DemoSolutionFeatures",
         "Repository": "VirtoCommerce/vc-module-demo-features",
-        "PackageUrl": "https://vc3prerelease.blob.core.windows.net/packages/VirtoCommerce.DemoSolutionFeatures_1.14.0-alpha.247.zip"
+        "PackageUrl": "https://vc3prerelease.blob.core.windows.net/packages/VirtoCommerce.DemoSolutionFeatures_1.14.0-pr-90-82d4680e.zip"
       },
       {
         "Id": "VirtoCommerce.DemoCustomerSegmentsModule",
@@ -205,12 +205,11 @@ data:
       {
         "Id": "VirtoCommerce.PriceExportImport",
         "Repository": "VirtoCommerce/vc-module-price-export-import",
-        "PackageUrl": "https://vc3prerelease.blob.core.windows.net/packages/VirtoCommerce.PriceExportImport_1.1.0-alpha.55.zip"
+        "PackageUrl": "https://vc3prerelease.blob.core.windows.net/packages/VirtoCommerce.PriceExportImport_1.1.0-pr-60-dccfc496.zip"
       },
       {
         "Id": "VirtoCommerce.CustomerExportImport",
         "Repository": "VirtoCommerce/vc-module-customer-export-import",
-        "PackageUrl": "https://vc3prerelease.blob.core.windows.net/packages/VirtoCommerce.CustomerExportImport_1.0.0-alpha.33.zip"
+        "PackageUrl": "https://vc3prerelease.blob.core.windows.net/packages/VirtoCommerce.CustomerExportImport_1.0.0-pr-30-c54ca7e3.zip"
       }
-
-    ] 
+    ]
