@@ -31,8 +31,8 @@ spec:
             path: /
             port: 80
             httpHeaders:
-            - name: Healths-Header
-              value: "True"
+            - name: Health-Check
+              value: "true"
           failureThreshold: 3
           successThreshold: 1
           initialDelaySeconds: 20
