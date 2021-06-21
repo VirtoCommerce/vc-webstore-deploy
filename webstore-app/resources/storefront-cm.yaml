@@ -5,6 +5,9 @@ metadata:
 data:
     APPINSIGHTS_INSTRUMENTATIONKEY: "4122074c-f2ad-489b-811f-d557350fb644"
     ASPNETCORE_FORWARDEDHEADERS_ENABLED: "true"
+    AzureAd__Enabled: "true"
+    AzureAd__ClientId: "80277d3d-4357-46f0-917f-334177695a0f"
+    AzureAd__TenantId: "bc03e660-5e3a-45c4-bf5c-b75489f78923"
     CookieAuthenticationOptions__ExpireTimeSpan: "12:00:00"
     SnapshotCollectorConfiguration__IsEnabled: "false"
     Swagger__UI__Enable: "true"
