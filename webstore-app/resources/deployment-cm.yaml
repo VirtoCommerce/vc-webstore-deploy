@@ -210,6 +210,6 @@ data:
       {
         "Id": "VirtoCommerce.CustomerExportImport",
         "Repository": "VirtoCommerce/vc-module-customer-export-import",
-        "PackageUrl": "https://vc3prerelease.blob.core.windows.net/packages/VirtoCommerce.CustomerExportImport_1.0.0-pr-39-c5b24c85.zip"
+        "PackageUrl": "https://vc3prerelease.blob.core.windows.net/packages/VirtoCommerce.CustomerExportImport_1.0.0-pr-39-cf21d0f8.zip"
       }
     ]
