@@ -9,6 +9,8 @@ spec:
         reloader.stakater.com/search: "true"
         configmap.reloader.stakater.com/reload: "webstore-storefront-cm, webstore-platform-cm, webstore-deployment-cm, webstore-platform-secret-configmap"
     spec:
+        imagePullSecrets:
+        - name: dockerconfigjson-github-com
         initContainers:
         - name: init-storefront
           imagePullPolicy: Always
