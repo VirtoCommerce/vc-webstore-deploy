@@ -22,6 +22,8 @@ spec:
               value: webstore-platform_source
         - name: init-platform
           imagePullPolicy: Always
+          imagePullSecrets:
+          - name: dockerconfigjson-github-com
           image: ghcr.io/virtocommerce/vc-deploy-containers/platform-installer:v3
           command:
             - "/bin/sh"
