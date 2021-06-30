@@ -24,6 +24,8 @@ spec:
         reloader.stakater.com/search: "true"
         configmap.reloader.stakater.com/reload: "public-storefront-cm, public-platform-cm, public-deployment-cm, public-platform-secret-configmap"
     spec:
+      imagePullSecrets:
+      - name: dockerconfigjson-github-com
       containers:
       - name: vc-storefront-web
         readinessProbe:
