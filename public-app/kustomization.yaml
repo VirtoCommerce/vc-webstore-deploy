@@ -59,7 +59,7 @@ patches:
     - op: add
       path: /spec/csi/volumeAttributes
       value:
-        containername: public-cms-content-demo
+        containername: public-cms-content-demo-argo
         skuName: Premium_LRS
   target:
     version: v1
