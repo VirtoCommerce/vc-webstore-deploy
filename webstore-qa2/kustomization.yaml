@@ -92,7 +92,6 @@ patchesStrategicMerge:
 
 resources:
 - ../common-base
-- ingress.yaml
 
 images:
 - name: docker.pkg.github.com/virtocommerce/vc-platform/platform
