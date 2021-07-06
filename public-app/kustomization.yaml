@@ -13,11 +13,9 @@ patchesStrategicMerge:
 - platform-cm.yaml
 - storefront-cm.yaml
 - platform-secrets.yaml
-- ./traefik/ingress.yaml
 - ./traefik/ingress-https.yaml
 resources:
 - ../common-base/public
-- ./traefik/middleware-rewrite.yaml
 #- kube-job.yaml
 images:
 - name: docker.pkg.github.com/virtocommerce/vc-platform/platform
