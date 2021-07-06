@@ -37,10 +37,11 @@ spec:
               httpHeaders:
               - name: Health-Check
                 value: "true"
-            failureThreshold: 3
+            failureThreshold: 50
             successThreshold: 1
             initialDelaySeconds: 5
-            periodSeconds: 1
+            periodSeconds: 5
+            timeoutSeconds: 3
           envFrom:
           - configMapRef:
               name: storefront-cm
