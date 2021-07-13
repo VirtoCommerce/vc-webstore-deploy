@@ -41,4 +41,4 @@ spec:
       - backend:
           serviceName: xapi-page
           servicePort: 80
-        path: /
+        path: /(.*)
