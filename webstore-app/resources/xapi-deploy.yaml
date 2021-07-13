@@ -55,8 +55,8 @@ metadata:
     nginx.ingress.kubernetes.io/proxy-buffering: "on"
     nginx.ingress.kubernetes.io/proxy-buffers-number: "16"
     nginx.ingress.kubernetes.io/proxy-buffer-size: "64k"
-    nginx.ingress.kubernetes.io/configuration-snippet: |
-     rewrite ^/(.*) https://$(VC_PLATFORM_SERVICE)-$(VC_NAMESPACE)-xapi.env.govirto.com break;
+    # nginx.ingress.kubernetes.io/configuration-snippet: |
+    #  rewrite ^/(.*) https://$(VC_PLATFORM_SERVICE)-$(VC_NAMESPACE)-xapi.env.govirto.com break;
     cert-manager.io/cluster-issuer: letsencrypt-wild
 spec:
   tls:
