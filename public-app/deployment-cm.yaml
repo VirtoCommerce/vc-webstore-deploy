@@ -5,7 +5,7 @@ metadata:
 data:
   ELECTRONICS_THEME_URL: https://github.com/VirtoCommerce/vc-demo-theme-default/releases/download/1.9.0/vc-demo-theme-default-1.9.0.zip
   ELECTRONICS_THEME_LOCATION: /mnt/cms-content/Themes/Electronics
-  B2B_THEME_URL: https://vc3prerelease.blob.core.windows.net/packages/vc-demo-theme-b2b-1.14.0-alpha.1683.zip
+  B2B_THEME_URL: https://vc3prerelease.blob.core.windows.net/packages/vc-demo-theme-b2b-1.14.0-pr-228-02e4c8c0.zip
   B2B_THEME_LOCATION: /mnt/cms-content/Themes/B2B-store
   ASSETS_URL: https://vcbacpac.blob.core.windows.net/dac-packages/webstore_assets_4.zip
   ASSETS_LOCATION: /mnt/cms-content/assets
@@ -14,22 +14,22 @@ data:
       {
         "Id": "VirtoCommerce.Core",
         "Repository": "VirtoCommerce/vc-module-core",
-        "PackageUrl": "https://github.com/VirtoCommerce/vc-module-core/releases/download/3.16.0/VirtoCommerce.Core_3.16.0.zip"
+        "PackageUrl": "https://github.com/VirtoCommerce/vc-module-core/releases/download/3.17.0/VirtoCommerce.Core_3.17.0.zip"
       },
       {
         "Id": "VirtoCommerce.AzureSearch",
         "Repository": "VirtoCommerce/vc-module-azure-search",
-        "PackageUrl": "https://github.com/VirtoCommerce/vc-module-azure-search/releases/download/3.8.0/VirtoCommerce.AzureSearch_3.8.0.zip"
+        "PackageUrl": "https://github.com/VirtoCommerce/vc-module-azure-search/releases/download/3.9.0/VirtoCommerce.AzureSearch_3.9.0.zip"
       },
       {
         "Id": "VirtoCommerce.Cart",
         "Repository": "VirtoCommerce/vc-module-cart",
-        "PackageUrl": "https://github.com/VirtoCommerce/vc-module-cart/releases/download/3.17.0/VirtoCommerce.Cart_3.17.0.zip"
+        "PackageUrl": "https://github.com/VirtoCommerce/vc-module-cart/releases/download/3.19.0/VirtoCommerce.Cart_3.19.0.zip"
       },
       {
         "Id": "VirtoCommerce.Catalog",
         "Repository": "VirtoCommerce/vc-module-catalog",
-        "PackageUrl": "https://github.com/VirtoCommerce/vc-module-catalog/releases/download/3.43.0/VirtoCommerce.Catalog_3.43.0.zip"
+        "PackageUrl": "https://github.com/VirtoCommerce/vc-module-catalog/releases/download/3.50.0/VirtoCommerce.Catalog_3.50.0.zip"
       },
       {
         "Id": "VirtoCommerce.Content",
@@ -54,12 +54,12 @@ data:
       {
         "Id": "VirtoCommerce.ImageTools",
         "Repository": "VirtoCommerce/vc-module-image-tools",
-        "PackageUrl": "https://github.com/VirtoCommerce/vc-module-image-tools/releases/download/3.12.0/VirtoCommerce.ImageTools_3.12.0.zip"
+        "PackageUrl": "https://github.com/VirtoCommerce/vc-module-image-tools/releases/download/3.13.0/VirtoCommerce.ImageTools_3.13.0.zip"
       },
       {
         "Id": "VirtoCommerce.Inventory",
         "Repository": "VirtoCommerce/vc-module-inventory",
-        "PackageUrl": "https://github.com/VirtoCommerce/vc-module-inventory/releases/download/3.17.0/VirtoCommerce.Inventory_3.17.0.zip"
+        "PackageUrl": "https://github.com/VirtoCommerce/vc-module-inventory/releases/download/3.18.0/VirtoCommerce.Inventory_3.18.0.zip"
       },
       {
         "Id": "VirtoCommerce.LuceneSearch",
@@ -69,17 +69,17 @@ data:
       {
         "Id": "VirtoCommerce.Marketing",
         "Repository": "VirtoCommerce/vc-module-marketing",
-        "PackageUrl": "https://github.com/VirtoCommerce/vc-module-marketing/releases/download/3.23.0/VirtoCommerce.Marketing_3.23.0.zip"
+        "PackageUrl": "https://github.com/VirtoCommerce/vc-module-marketing/releases/download/3.25.0/VirtoCommerce.Marketing_3.25.0.zip"
       },
       {
         "Id": "VirtoCommerce.Notifications",
         "Repository": "VirtoCommerce/vc-module-notification",
-        "PackageUrl": "https://github.com/VirtoCommerce/vc-module-notification/releases/download/3.15.0/VirtoCommerce.Notifications_3.15.0.zip"
+        "PackageUrl": "https://github.com/VirtoCommerce/vc-module-notification/releases/download/3.17.0/VirtoCommerce.Notifications_3.17.0.zip"
       },
       {
         "Id": "VirtoCommerce.Orders",
         "Repository": "VirtoCommerce/vc-module-order",
-        "PackageUrl": "https://github.com/VirtoCommerce/vc-module-order/releases/download/3.30.0/VirtoCommerce.Orders_3.30.0.zip"
+        "PackageUrl": "https://github.com/VirtoCommerce/vc-module-order/releases/download/3.33.0/VirtoCommerce.Orders_3.33.0.zip"
       },
       {
         "Id": "VirtoCommerce.Payment",
@@ -94,12 +94,12 @@ data:
       {
         "Id": "VirtoCommerce.Search",
         "Repository": "VirtoCommerce/vc-module-search",
-        "PackageUrl": "https://github.com/VirtoCommerce/vc-module-search/releases/download/3.13.0/VirtoCommerce.Search_3.13.0.zip"
+        "PackageUrl": "https://github.com/VirtoCommerce/vc-module-search/releases/download/3.14.0/VirtoCommerce.Search_3.14.0.zip"
       },
       {
         "Id": "VirtoCommerce.Shipping",
         "Repository": "VirtoCommerce/vc-module-shipping",
-        "PackageUrl": "https://github.com/VirtoCommerce/vc-module-shipping/releases/download/3.6.0/VirtoCommerce.Shipping_3.6.0.zip"
+        "PackageUrl": "https://github.com/VirtoCommerce/vc-module-shipping/releases/download/3.8.0/VirtoCommerce.Shipping_3.8.0.zip"
       },
       {
         "Id": "VirtoCommerce.Sitemaps",
@@ -109,7 +109,7 @@ data:
       {
         "Id": "VirtoCommerce.Store",
         "Repository": "VirtoCommerce/vc-module-store",
-        "PackageUrl": "https://github.com/VirtoCommerce/vc-module-store/releases/download/3.18.0/VirtoCommerce.Store_3.18.0.zip"
+        "PackageUrl": "https://github.com/VirtoCommerce/vc-module-store/releases/download/3.19.0/VirtoCommerce.Store_3.19.0.zip"
       },
       {
         "Id": "VirtoCommerce.Subscription",
@@ -119,7 +119,7 @@ data:
       {
         "Id": "VirtoCommerce.Tax",
         "Repository": "VirtoCommerce/vc-module-tax",
-        "PackageUrl": "https://github.com/VirtoCommerce/vc-module-tax/releases/download/3.6.0/VirtoCommerce.Tax_3.6.0.zip"
+        "PackageUrl": "https://github.com/VirtoCommerce/vc-module-tax/releases/download/3.8.0/VirtoCommerce.Tax_3.8.0.zip"
       },
       {
         "Id": "VirtoCommerce.CustomerReviews",
@@ -139,7 +139,7 @@ data:
       {
         "Id": "VirtoCommerce.CatalogPersonalization",
         "Repository": "VirtoCommerce/vc-module-catalog-personalization",
-        "PackageUrl": "https://github.com/VirtoCommerce/vc-module-catalog-personalization/releases/download/3.9.0/VirtoCommerce.CatalogPersonalization_3.9.0.zip"
+        "PackageUrl": "https://github.com/VirtoCommerce/vc-module-catalog-personalization/releases/download/3.10.0/VirtoCommerce.CatalogPersonalization_3.10.0.zip"
       },
       {
         "Id": "VirtoCommerce.CatalogPublishing",
@@ -169,7 +169,7 @@ data:
       {
         "Id": "VirtoCommerce.Quote",
         "Repository": "VirtoCommerce/vc-module-quote",
-        "PackageUrl": "https://github.com/VirtoCommerce/vc-module-quote/releases/download/3.14.0/VirtoCommerce.Quote_3.14.0.zip"
+        "PackageUrl": "https://github.com/VirtoCommerce/vc-module-quote/releases/download/3.15.0/VirtoCommerce.Quote_3.15.0.zip"
       },
       {
         "Id": "VirtoCommerce.DynamicAssociations",
@@ -179,7 +179,7 @@ data:
       {
         "Id": "VirtoCommerce.ExperienceApi",
         "Repository": "VirtoCommerce/vc-module-experience-api",
-        "PackageUrl": "https://github.com/VirtoCommerce/vc-module-experience-api/releases/download/1.14.0/VirtoCommerce.ExperienceApi_1.14.0.zip"
+        "PackageUrl": "https://github.com/VirtoCommerce/vc-module-experience-api/releases/download/1.19.0/VirtoCommerce.ExperienceApi_1.19.0.zip"
       },
       {
         "Id": "VirtoCommerce.FeatureManagement",
@@ -189,7 +189,7 @@ data:
       {
         "Id": "VirtoCommerce.DemoSolutionFeatures",
         "Repository": "VirtoCommerce/vc-module-demo-features",
-        "PackageUrl": "https://vc3prerelease.blob.core.windows.net/packages/VirtoCommerce.DemoSolutionFeatures_1.14.0-pr-90-82d4680e.zip"
+        "PackageUrl": "https://vc3prerelease.blob.core.windows.net/packages/VirtoCommerce.DemoSolutionFeatures_1.14.0-pr-91-8bc31891.zip"
       },
       {
         "Id": "VirtoCommerce.DemoCustomerSegmentsModule",
@@ -199,11 +199,11 @@ data:
       {
         "Id": "VirtoCommerce.PriceExportImport",
         "Repository": "VirtoCommerce/vc-module-price-export-import",
-        "PackageUrl": "https://vc3prerelease.blob.core.windows.net/packages/VirtoCommerce.PriceExportImport_1.1.0-alpha.55.zip"
+        "PackageUrl": "https://vc3prerelease.blob.core.windows.net/packages/VirtoCommerce.PriceExportImport_1.3.0-pr-64-be13ffae.zip"
       },
       {
         "Id": "VirtoCommerce.CustomerExportImport",
         "Repository": "VirtoCommerce/vc-module-customer-export-import",
-        "PackageUrl": "https://vc3prerelease.blob.core.windows.net/packages/VirtoCommerce.CustomerExportImport_1.0.0-alpha.36.zip"
+        "PackageUrl": "https://vc3prerelease.blob.core.windows.net/packages/VirtoCommerce.CustomerExportImport_1.0.0-pr-51-26df89dd.zip"
       }
     ]
