@@ -17,6 +17,9 @@ spec:
     - hosts:   
       - "$(VC_PLATFORM_SERVICE).$(VC_NAMESPACE).govirto.com"
       secretName: $(VC_PLATFORM_SERVICE)-$(VC_NAMESPACE)-tls
+    - hosts:   
+      - "$(VC_PLATFORM_SERVICE)-$(VC_NAMESPACE)-xapi.env.govirto.com"
+      secretName: $(VC_PLATFORM_SERVICE)-xapi-$(VC_NAMESPACE)-tls
   rules:
   - host: $(VC_STOREFRONT_SERVICE).$(VC_NAMESPACE).govirto.com
     http:
@@ -30,5 +33,12 @@ spec:
       paths:
       - backend:
           serviceName: platform
+          servicePort: 80
+        path: /
+  - host: $(VC_PLATFORM_SERVICE)-$(VC_NAMESPACE)-xapi.env.govirto.com
+    http:
+      paths:
+      - backend:
+          serviceName: xapi-page
           servicePort: 80
         path: /
