@@ -25,7 +25,7 @@ spec:
         args:
           - "rm /usr/share/nginx/html/environments/environment.variables.json
             && envsubst '$${PLATFORM_URL}'< /usr/share/nginx/html/environments/environment.variables.json.template > /usr/share/nginx/html/environments/environment.variables.json
-            && nginx -g daemon off;"
+            && nginx -g daemon off"
         ports:
         - containerPort: 80
         resources:
