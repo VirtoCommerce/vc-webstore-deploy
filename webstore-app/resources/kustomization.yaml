@@ -15,8 +15,8 @@ resources:
 
 images:
 - name: docker.pkg.github.com/virtocommerce/vc-platform/platform
-  newName: ghcr.io/virtocommerce/vc-platform/platform
-  newTag: 3.67.0-master-1d8965d9
+  newName: ghcr.io/virtocommerce/platform
+  newTag: 3.70.0-master-af7c1a31
 - name: docker.pkg.github.com/virtocommerce/vc-storefront/storefront
   newName: ghcr.io/virtocommerce/demo-storefront
   newTag: 1.13.0-alpha.1033-dev-cd9fb156
