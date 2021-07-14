@@ -5,15 +5,13 @@ metadata:
   namespace: argocd
   finalizers:
     - resources-finalizer.argocd.argoproj.io
-  annotations:
-    argocd.argoproj.io/manifest-generate-paths: . ; ../../../common-base; ../../resources  
 spec:
   destination:
     namespace: demo
     server: https://kubernetes.default.svc
   project: prod-tenant
   source:
-    path: webstore-app/overlays/qa
+    path: webstore-app/overlays/demo
     repoURL: https://github.com/VirtoCommerce/vc-webstore-deploy
     targetRevision: HEAD
   syncPolicy:

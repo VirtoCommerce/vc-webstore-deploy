@@ -1,12 +1,29 @@
 apiVersion: kustomize.config.k8s.io/v1beta1
 kind: Kustomization
-namespace: demo
-namePrefix: webstore-
-commonLabels:
-  instance: webstore
 
+namespace: demo
+namePrefix: public-
+commonLabels:
+  instance: public
+
+patchesStrategicMerge:
+- storefront-deploy.yaml
+- platform-deploy.yaml
+- deployment-cm.yaml
+- platform-cm.yaml
+- storefront-cm.yaml
+- platform-secrets.yaml
+- ./traefik/ingress-https.yaml
 resources:
-- ../../resources
+- ../common-base/public
+#- kube-job.yaml
+images:
+- name: docker.pkg.github.com/virtocommerce/vc-platform/platform
+  newName: ghcr.io/virtocommerce/vc-platform/platform
+  newTag: 3.67.0-master-1d8965d9
+- name: docker.pkg.github.com/virtocommerce/vc-storefront/storefront
+  newName: ghcr.io/virtocommerce/demo-storefront
+  newTag: 1.13.0-alpha.1033-dev-cd9fb156
 
 configMapGenerator:
 - name: db-config
@@ -15,12 +32,6 @@ configMapGenerator:
     - VC_DB=vc-prod-dbserver
     - VC_DB_POOL=vc-prod-elasticpool
     - VC_DB_USER=virto
-- name: platform-overlay-config
-  envs: 
-    - platform-overlay.env
-- name: storefront-overlay-config
-  envs: 
-    - storefront-overlay.env
 - name: vault-config
   literals:
     - VAULT_API_URL=http://hashicorp-vault.vault.svc.cluster.local:8200
@@ -29,7 +40,7 @@ patches:
 - patch: |-
     - op: add
       path: /spec/template/spec/nodeSelector
-      value: 
+      value:
         agentpool: apool
   target:
     group: apps
@@ -41,12 +52,12 @@ patches:
       value:
         driver: blob.csi.azure.com
         readOnly: false
-        fsType: ext4 
-        volumeHandle: mc_cloud-platform_vc-master_eastus#fuse8d50cd269f0a49fcba0#webstore-cms-content-demo
+        fsType: ext4
+        volumeHandle: mc_cloud-platform_vc-master_eastus#fuse8d50cd269f0a49fcba0#public-cms-content-demo
     - op: add
       path: /spec/csi/volumeAttributes
-      value: 
-        containername: webstore-cms-content-demo
+      value:
+        containername: public-cms-content-demo-argo
         skuName: Premium_LRS
   target:
     version: v1
