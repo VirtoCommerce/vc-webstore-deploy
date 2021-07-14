@@ -52,8 +52,7 @@ metadata:
   annotations:
     kubernetes.io/ingress.class: nginx
     nginx.ingress.kubernetes.io/force-ssl-redirect: "true"
-    # nginx.ingress.kubernetes.io/configuration-snippet: |
-    #  rewrite ^/(.*) / break;
+    nginx.ingress.kubernetes.io/rewrite-target: /$2
     cert-manager.io/cluster-issuer: letsencrypt-wild
 spec:
   tls:
@@ -67,4 +66,4 @@ spec:
       - backend:
           serviceName: xapi-page
           servicePort: 80
-        path: /
+        path: /(.*)
