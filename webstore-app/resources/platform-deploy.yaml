@@ -37,10 +37,10 @@ spec:
             httpGet:
               path: /health
               port: 80
-          failureThreshold: 50
-          successThreshold: 1
-          initialDelaySeconds: 10
-          periodSeconds: 1
+            failureThreshold: 50
+            successThreshold: 1
+            initialDelaySeconds: 10
+            periodSeconds: 1
           resources:
             requests:
               memory: "256Mi"
