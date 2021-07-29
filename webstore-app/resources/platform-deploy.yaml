@@ -33,11 +33,11 @@ spec:
             && python3 install-modules.py \"$MODULES_CONFIG\" /mnt/Modules/*"
       containers:
         - name: vc-platform-web
-          readinessProbe:
+          startupProbe:
             httpGet:
-              path: /
+              path: /health
               port: 80
-            failureThreshold: 3
+            failureThreshold: 50
             successThreshold: 1
             initialDelaySeconds: 10
             periodSeconds: 1
