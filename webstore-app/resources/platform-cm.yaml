@@ -27,4 +27,3 @@ data:
     VirtoCommerce__LocalUploadFolderPath: app_data/uploads
     Search__ElasticSearch__Server: http://search-dev-es-http.elastic-system:9200
     DemoFeatures__ConfigurableProduct: "true"
-    Test: true
