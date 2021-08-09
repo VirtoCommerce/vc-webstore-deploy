@@ -20,7 +20,7 @@ data:
       {
         "Id": "VirtoCommerce.Core",
         "Repository": "VirtoCommerce/vc-module-core",
-        "PackageUrl": "https://github.com/VirtoCommerce/vc-module-core/releases/download/3.18.0/VirtoCommerce.Core_3.18.0.zip"
+        "PackageUrl": "https://github.com/VirtoCommerce/vc-module-core/releases/download/3.20.0/VirtoCommerce.Core_3.20.0.zip"
       },
       {
         "Id": "VirtoCommerce.AzureSearch",
@@ -115,12 +115,12 @@ data:
       {
         "Id": "VirtoCommerce.Store",
         "Repository": "VirtoCommerce/vc-module-store",
-        "PackageUrl": "https://github.com/VirtoCommerce/vc-module-store/releases/download/3.20.0/VirtoCommerce.Store_3.20.0.zip"
+        "PackageUrl": "https://github.com/VirtoCommerce/vc-module-store/releases/download/3.21.0/VirtoCommerce.Store_3.21.0.zip"
       },
       {
         "Id": "VirtoCommerce.Subscription",
         "Repository": "VirtoCommerce/vc-module-subscription",
-        "PackageUrl": "https://github.com/VirtoCommerce/vc-module-subscription/releases/download/3.11.0/VirtoCommerce.Subscription_3.11.0.zip"
+        "PackageUrl": "https://github.com/VirtoCommerce/vc-module-subscription/releases/download/3.12.0/VirtoCommerce.Subscription_3.12.0.zip"
       },
       {
         "Id": "VirtoCommerce.Tax",
@@ -160,7 +160,7 @@ data:
       {
         "Id": "VirtoCommerce.CatalogCsvImportModule",
         "Repository": "VirtoCommerce/vc-module-catalog-csv-import",
-        "PackageUrl": "https://github.com/VirtoCommerce/vc-module-catalog-csv-import/releases/download/3.22.0/VirtoCommerce.CatalogCsvImportModule_3.22.0.zip"
+        "PackageUrl": "https://github.com/VirtoCommerce/vc-module-catalog-csv-import/releases/download/3.23.0/VirtoCommerce.CatalogCsvImportModule_3.23.0.zip"
       },
       {
         "Id": "VirtoCommerce.Contentful",
