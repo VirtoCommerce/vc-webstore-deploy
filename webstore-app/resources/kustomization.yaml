@@ -20,8 +20,7 @@ images:
   newTag: 3.69.0-alpha.12020-vds-2369-5a402432
 - name: docker.pkg.github.com/virtocommerce/vc-storefront/storefront
   newName: ghcr.io/virtocommerce/demo-storefront
-  newTag: 1.13.0-alpha.1034-dev-4543e095
+  newTag: 1.13.0-alpha.1034-vds-1513-68741f61
 - name: ghcr.io/virtocommerce/demo-xapi-app
   newName: ghcr.io/virtocommerce/demo-xapi-app
-  newTag: 1.0.0-alpha.46-dev
-  
+  newTag: 1.0.0-pr-31-vds-2522-47124047

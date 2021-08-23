@@ -1,7 +1,7 @@
 apiVersion: argoproj.io/v1alpha1
 kind: Application
 metadata:
-  name: webstore
+  name: webstore2
   namespace: argocd
   finalizers:
     - resources-finalizer.argocd.argoproj.io
@@ -9,14 +9,14 @@ metadata:
     notifications.argoproj.io/subscribe.on-health-degraded.msteams-webstore: ""
     notifications.argoproj.io/subscribe.on-sync-failed.msteams-webstore: ""
   labels:
-    instance: webstore
+    instance: webstore2
 spec:
   destination:
     namespace: qa
     server: 'https://aks-f783f1e0.hcp.westus.azmk8s.io:443'
   project: tenant
   source:
-    path: webstore-app/overlays/qa
+    path: webstore-qa2
     repoURL: https://github.com/VirtoCommerce/vc-webstore-deploy
     targetRevision: qa
   syncPolicy:

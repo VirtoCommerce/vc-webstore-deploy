@@ -9,7 +9,6 @@ metadata:
     nginx.ingress.kubernetes.io/proxy-buffers-number: "16"
     nginx.ingress.kubernetes.io/proxy-buffer-size: "64k"
     cert-manager.io/cluster-issuer: letsencrypt-wild
-    nginx.ingress.kubernetes.io/enable-cors: "true"
 spec:
   tls:
     - hosts: 
