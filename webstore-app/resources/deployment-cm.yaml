@@ -215,6 +215,6 @@ data:
       {
         "Id": "VirtoCommerce.DescriptionExportImport",
         "Repository": "VirtoCommerce/vc-module-description-export-import",
-        "PackageUrl": "https://vc3prerelease.blob.core.windows.net/packages/VirtoCommerce.DescriptionExportImport_1.0.0-pr-7-62919bf4.zip"
+        "PackageUrl": "https://vc3prerelease.blob.core.windows.net/packages/VirtoCommerce.DescriptionExportImport_1.0.0-pr-7-bd4142b4.zip"
       }
     ]
