@@ -16,7 +16,7 @@ patchesStrategicMerge:
 - ./traefik/ingress-https.yaml
 resources:
 - ../common-base/public
-- kube-job.yaml
+#- kube-job.yaml
 images:
 - name: docker.pkg.github.com/virtocommerce/vc-platform/platform
   newName: ghcr.io/virtocommerce/platform
