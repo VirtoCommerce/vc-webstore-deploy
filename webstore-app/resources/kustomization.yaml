@@ -23,4 +23,4 @@ images:
   newTag: 1.13.0-alpha.1034-vds-1513-68741f61
 - name: ghcr.io/virtocommerce/demo-xapi-app
   newName: ghcr.io/virtocommerce/demo-xapi-app
-  newTag: 1.0.0-pr-50-vds-2506-5f51c19d
+  newTag: 1.0.0-pr-59-vds-2812-25066d55
