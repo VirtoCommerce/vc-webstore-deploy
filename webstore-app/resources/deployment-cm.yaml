@@ -185,7 +185,7 @@ data:
       {
         "Id": "VirtoCommerce.ExperienceApi",
         "Repository": "VirtoCommerce/vc-module-experience-api",
-        "PackageUrl": "https://vc3prerelease.blob.core.windows.net/packages/VirtoCommerce.ExperienceApi_1.24.0-pr-192.zip"
+        "PackageUrl": "https://vc3prerelease.blob.core.windows.net/packages/VirtoCommerce.ExperienceApi_1.29.0-pr-203.zip"
       },
       {
         "Id": "VirtoCommerce.FeatureManagement",
@@ -215,6 +215,6 @@ data:
       {
         "Id": "VirtoCommerce.DescriptionExportImport",
         "Repository": "VirtoCommerce/vc-module-description-export-import",
-        "PackageUrl": "https://vc3prerelease.blob.core.windows.net/packages/VirtoCommerce.DescriptionExportImport_1.0.0-pr-12-7b665471.zip"
+        "PackageUrl": "https://vc3prerelease.blob.core.windows.net/packages/VirtoCommerce.DescriptionExportImport_1.0.0-pr-12-936500e9.zip"
       }
     ]
