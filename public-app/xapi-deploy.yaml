@@ -58,10 +58,10 @@ metadata:
 spec:
   tls:
     - hosts:
-      - "https://$(VC_DEMO_XAPI_APP).$(VC_NAMESPACE).govirto.com"
+      - "$(VC_DEMO_XAPI_APP).$(VC_NAMESPACE).govirto.com"
       secretName: $(VC_DEMO_XAPI_APP)-$(VC_NAMESPACE)-tls
   rules:
-  - host: https://$(VC_DEMO_XAPI_APP).$(VC_NAMESPACE).govirto.com
+  - host: $(VC_DEMO_XAPI_APP).$(VC_NAMESPACE).govirto.com
     http:
       paths:
       - backend:
