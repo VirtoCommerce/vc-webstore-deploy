@@ -1,0 +1,123 @@
+apiVersion: kustomize.config.k8s.io/v1beta1
+kind: Kustomization
+
+namespace: demo
+namePrefix: public-
+commonLabels:
+  instance: public
+
+patchesStrategicMerge:
+- storefront-deploy.yaml
+- platform-deploy.yaml
+- deployment-cm.yaml
+- platform-cm.yaml
+- storefront-cm.yaml
+- platform-secrets.yaml
+- ./traefik/ingress-https.yaml
+resources:
+- ../common-base/public
+- xapi-deploy.yaml
+#- kube-job.yaml
+images:
+- name: docker.pkg.github.com/virtocommerce/vc-platform/platform
+  newName: ghcr.io/virtocommerce/platform
+  newTag: 3.69.0-master-ab85dffc
+- name: docker.pkg.github.com/virtocommerce/vc-storefront/storefront
+  newName: ghcr.io/virtocommerce/demo-storefront
+  newTag: 1.13.0-alpha.1034-dev-4543e095
+- name: ghcr.io/virtocommerce/demo-xapi-app
+  newName: ghcr.io/virtocommerce/demo-xapi-app
+  newTag: 1.0.0-alpha.67-dev
+
+configMapGenerator:
+- name: db-config
+  literals:
+    - VC_DB_HOST=vc-prod-dbserver.database.windows.net
+    - VC_DB=vc-prod-dbserver
+    - VC_DB_POOL=vc-prod-elasticpool
+    - VC_DB_USER=virto
+- name: vault-config
+  literals:
+    - VAULT_API_URL=http://hashicorp-vault.vault.svc.cluster.local:8200
+- name: url-config
+  literals:
+    - VC_DEMO_XAPI_APP=xapi-app
+    - VC_PLATFORM_URL=https://admin-demo.virtocommerce.com
+
+patches:
+- patch: |-
+    - op: add
+      path: /spec/template/spec/nodeSelector
+      value:
+        agentpool: apool
+  target:
+    group: apps
+    version: v1
+    kind: Deployment
+- patch: |-
+    - op: add
+      path: /spec/csi
+      value:
+        driver: blob.csi.azure.com
+        readOnly: false
+        fsType: ext4
+        volumeHandle: mc_cloud-platform_vc-master_eastus#fuse8d50cd269f0a49fcba0#public-cms-content-demo
+    - op: add
+      path: /spec/csi/volumeAttributes
+      value:
+        containername: public-cms-content-demo-argo
+        skuName: Premium_LRS
+  target:
+    version: v1
+    kind: PersistentVolume
+
+vars:
+- name: VC_DB_HOST
+  objref:
+    kind: ConfigMap
+    name: db-config
+    apiVersion: v1
+  fieldref:
+    fieldpath: data.VC_DB_HOST
+- name: VC_DB
+  objref:
+    kind: ConfigMap
+    name: db-config
+    apiVersion: v1
+  fieldref:
+    fieldpath: data.VC_DB
+- name: VC_DB_POOL
+  objref:
+    kind: ConfigMap
+    name: db-config
+    apiVersion: v1
+  fieldref:
+    fieldpath: data.VC_DB_POOL
+- name: VC_DB_USER
+  objref:
+    kind: ConfigMap
+    name: db-config
+    apiVersion: v1
+  fieldref:
+    fieldpath: data.VC_DB_USER
+- name: VAULT_API_URL
+  objref:
+    kind: ConfigMap
+    name: vault-config
+    apiVersion: v1
+  fieldref:
+    fieldpath: data.VAULT_API_URL
+- name: VC_PLATFORM_URL
+  objref:
+    kind: ConfigMap
+    name: url-config
+    apiVersion: v1
+  fieldref:
+    fieldpath: data.VC_PLATFORM_URL
+- name: VC_DEMO_XAPI_APP
+  objref:
+    kind: ConfigMap
+    name: url-config
+    apiVersion: v1
+  fieldref:
+    fieldpath: data.VC_DEMO_XAPI_APP
