@@ -14,10 +14,10 @@ metadata:
 spec:
   tls:
     - hosts:
-      - "$(VC_PLATFORM_URL)"
+      - $(VC_PLATFORM_SERVICE).$(VC_NAMESPACE).govirto.com
       secretName: $(VC_PLATFORM_SERVICE)-$(VC_NAMESPACE)-tls
   rules:
-  - host: $(VC_PLATFORM_URL)
+  - host: $(VC_PLATFORM_SERVICE).$(VC_NAMESPACE).govirto.com
     http:
       paths:
       - backend:
