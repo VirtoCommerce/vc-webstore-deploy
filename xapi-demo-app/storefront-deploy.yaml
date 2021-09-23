@@ -1,3 +1,4 @@
+$patch: delete
 apiVersion: apps/v1
 kind: Deployment
 metadata:
@@ -46,4 +47,4 @@ spec:
         args:
           - "cat /vault/secrets/u >> /vault/secrets/config;
             cat /vault/secrets/p >> /vault/secrets/config;
-            source /vault/secrets/config && dotnet VirtoCommerce.Storefront.dll" 
+            source /vault/secrets/config && dotnet VirtoCommerce.Storefront.dll"
