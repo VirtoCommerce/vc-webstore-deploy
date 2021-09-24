@@ -5,4 +5,4 @@ resources:
 - webstore-app.yaml
 - error-page.yaml
 - public-app.yaml
-- xapi-demo-app.yaml
+- xapi-app.yaml
