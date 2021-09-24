@@ -1,7 +1,7 @@
 apiVersion: argoproj.io/v1alpha1
 kind: Application
 metadata:
-  name: xapi-demo-app
+  name: xapi-app
   namespace: argocd
   finalizers:
     - resources-finalizer.argocd.argoproj.io
@@ -9,14 +9,14 @@ metadata:
     notifications.argoproj.io/subscribe.on-health-degraded.msteams-public: ""
     notifications.argoproj.io/subscribe.on-sync-failed.msteams-public: ""
   labels:
-    instance: xapi-demo-app
+    instance: xapi-app
 spec:
   destination:
     namespace: demo
     server: https://kubernetes.default.svc
   project: prod-tenant
   source:
-    path: xapi-demo-app
+    path: xapi-app
     repoURL: https://github.com/VirtoCommerce/vc-webstore-deploy
     targetRevision: master
   syncPolicy:
