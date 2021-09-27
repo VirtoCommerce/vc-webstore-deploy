@@ -5,6 +5,20 @@ metadata:
 spec:
   template:
     spec:
+      affinity:
+        podAffinity:
+          requiredDuringSchedulingIgnoredDuringExecution:
+          - labelSelector:
+              matchExpressions:
+              - key: app
+                operator: In
+                values:
+                - platform
+              - key: instance
+                operator: In
+                values:
+                - webstore
+            topologyKey: topology.kubernetes.io/zone
       containers:
         - name: vc-storefront-web
           resources:
