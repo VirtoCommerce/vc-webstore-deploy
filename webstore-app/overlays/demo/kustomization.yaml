@@ -8,6 +8,10 @@ commonLabels:
 resources:
 - ../../resources
 
+patchesStrategicMerge:
+- storefront-deploy.yaml
+- platform-deploy.yaml
+
 configMapGenerator:
 - name: db-config
   literals:
