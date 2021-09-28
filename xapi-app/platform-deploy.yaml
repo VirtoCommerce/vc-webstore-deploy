@@ -23,7 +23,7 @@ spec:
           image: mcr.microsoft.com/mssql-tools
           env:
             - name: VC_SAMPLE_DATA_DB
-              value: public-platform_demo_src
+              value: webstore-platform_source
         - name: init-platform
           imagePullPolicy: Always
           image: ghcr.io/virtocommerce/vc-deploy-containers/platform-installer:v3
