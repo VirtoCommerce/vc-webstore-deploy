@@ -61,11 +61,11 @@ patches:
         driver: blob.csi.azure.com
         readOnly: false
         fsType: ext4
-        volumeHandle: mc_cloud-platform_vc-master_eastus#fuse8d50cd269f0a49fcba0#public-cms-content-demo
+        volumeHandle: mc_cloud-platform_vc-master_eastus#fuse8d50cd269f0a49fcba0#xapi-cms-content-demo
     - op: add
       path: /spec/csi/volumeAttributes
       value:
-        containername: public-cms-content-demo-argo
+        containername: xapi-cms-content-demo
         skuName: Premium_LRS
   target:
     version: v1
