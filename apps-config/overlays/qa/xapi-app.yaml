@@ -1,0 +1,25 @@
+apiVersion: argoproj.io/v1alpha1
+kind: Application
+metadata:
+  name: xapi-app
+  namespace: argocd
+  finalizers:
+    - resources-finalizer.argocd.argoproj.io
+  annotations:
+    notifications.argoproj.io/subscribe.on-health-degraded.msteams-xapi-app: ""
+    notifications.argoproj.io/subscribe.on-sync-failed.msteams-xapi-app: ""
+  labels:
+    instance: xapi-app
+spec:
+  destination:
+    namespace: qa
+    server: 'https://aks-f783f1e0.hcp.westus.azmk8s.io:443'
+  project: tenant
+  source:
+    path: xapi-app/overlays/qa
+    repoURL: https://github.com/VirtoCommerce/vc-webstore-deploy
+    targetRevision: qa
+  syncPolicy:
+    automated:
+      prune: true
+      selfHeal: true
