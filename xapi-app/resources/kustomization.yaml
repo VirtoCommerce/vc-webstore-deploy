@@ -26,3 +26,17 @@ images:
 - name: ghcr.io/virtocommerce/demo-xapi-app
   newName: ghcr.io/virtocommerce/demo-xapi-app
   newTag: 1.0.0-pr-73-vds-2166-4bd91f21
+
+configMapGenerator:
+- name: url-config
+  literals:
+    - VC_DEMO_XAPI_APP=xapi-app
+
+vars:
+- name: VC_DEMO_XAPI_APP
+  objref:
+    kind: ConfigMap
+    name: url-config
+    apiVersion: v1
+  fieldref:
+    fieldpath: data.VC_DEMO_XAPI_APP

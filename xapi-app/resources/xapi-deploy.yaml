@@ -52,16 +52,14 @@ metadata:
   annotations:
     kubernetes.io/ingress.class: nginx
     nginx.ingress.kubernetes.io/force-ssl-redirect: "true"
-#    nginx.ingress.kubernetes.io/custom-http-errors: "404"
-#    nginx.ingress.kubernetes.io/default-backend: $(VC_INSTANCE)-xapi-page
     cert-manager.io/cluster-issuer: letsencrypt
 spec:
   tls:
     - hosts:   
-      - "$(VC_INSTANCE)-xapi.$(VC_NAMESPACE).govirto.com"
-      secretName: $(VC_INSTANCE)-xapi-$(VC_NAMESPACE)-tls
+      - "$(VC_DEMO_XAPI_APP).$(VC_NAMESPACE).govirto.com"
+      secretName: $(VC_DEMO_XAPI_APP)-$(VC_NAMESPACE)-tls
   rules:
-  - host: $(VC_INSTANCE)-xapi.$(VC_NAMESPACE).govirto.com
+  - host: $(VC_DEMO_XAPI_APP).$(VC_NAMESPACE).govirto.com
     http:
       paths:
       - backend:
