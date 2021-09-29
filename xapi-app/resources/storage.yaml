@@ -1,3 +1,18 @@
+$patch: delete
+apiVersion: v1
+kind: PersistentVolume
+metadata:
+  name: cms-content
+spec:
+  accessModes:
+  - ReadWriteMany
+  capacity:
+    storage: 200Mi
+  csi: {}
+  persistentVolumeReclaimPolicy: Retain
+  volumeMode: Filesystem
+  storageClassName: "blob-premium"
+---
 kind: PersistentVolumeClaim
 apiVersion: v1
 metadata:
