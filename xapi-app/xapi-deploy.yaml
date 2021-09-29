@@ -21,7 +21,7 @@ spec:
           - "-c"
         env:
           - name: PLATFORM_URL
-            value: "$(VC_PLATFORM_SERVICE).$(VC_NAMESPACE).govirto.com"
+            value: "https://$(VC_PLATFORM_SERVICE).$(VC_NAMESPACE).govirto.com"
         args:
           - "rm /usr/share/nginx/html/environments/environment.variables.json
             && envsubst '$${PLATFORM_URL}'< /usr/share/nginx/html/environments/environment.variables.json.template > /usr/share/nginx/html/environments/environment.variables.json
