@@ -30,7 +30,8 @@ spec:
             - "-c"
           args:
             - "echo START INIT $(date +%Y-%m-%d-%H-%M-%S)
-            && python3 install-modules.py \"$MODULES_CONFIG\" /mnt/Modules/*"
+            && python3 install-modules.py \"$MODULES_CONFIG\" /mnt/Modules/*
+            && python3 installer.py $(ASSETS_URL) $(ASSETS_LOCATION)"
       containers:
         - name: vc-platform-web
           startupProbe:
