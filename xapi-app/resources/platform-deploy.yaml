@@ -52,6 +52,9 @@ spec:
               name: platform-cm
           - configMapRef:
               name: platform-overlay-config
+          - configMapRef:
+              name: deployment-cm 
+
   strategy:
     rollingUpdate:
       maxSurge: 0
