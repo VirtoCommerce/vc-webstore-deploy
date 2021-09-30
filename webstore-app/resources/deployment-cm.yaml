@@ -185,7 +185,7 @@ data:
       {
         "Id": "VirtoCommerce.ExperienceApi",
         "Repository": "VirtoCommerce/vc-module-experience-api",
-        "PackageUrl": "https://vc3prerelease.blob.core.windows.net/packages/VirtoCommerce.ExperienceApi_1.34.0-pr-217.zip"
+        "PackageUrl": "https://vc3prerelease.blob.core.windows.net/demo/VirtoCommerce.ExperienceApi_1.34.0-pr-217-fix.zip"
       },
       {
         "Id": "VirtoCommerce.FeatureManagement",
