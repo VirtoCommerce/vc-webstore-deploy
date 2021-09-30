@@ -18,9 +18,6 @@ configMapGenerator:
 - name: platform-overlay-config
   envs: 
     - platform-overlay.env
-- name: storefront-overlay-config
-  envs: 
-    - storefront-overlay.env
 - name: vault-config
   literals:
     - VAULT_API_URL=http://vault-dev.vault-dev.svc.cluster.local:8200
@@ -72,4 +69,3 @@ vars:
     apiVersion: v1
   fieldref:
     fieldpath: data.VAULT_API_URL
-
