@@ -21,7 +21,7 @@ spec:
           - "-c"
         env:
           - name: PLATFORM_URL
-            value: "https://$(VC_PLATFORM_SERVICE).$(VC_NAMESPACE).govirto.com"
+            value: "https://$(VC_PLATFORM_SERVICE).demo.govirto.com"
         args:
           - "rm /usr/share/nginx/html/environments/environment.variables.json
             && envsubst '$${PLATFORM_URL}'< /usr/share/nginx/html/environments/environment.variables.json.template > /usr/share/nginx/html/environments/environment.variables.json
@@ -56,10 +56,10 @@ metadata:
 spec:
   tls:
     - hosts:   
-      - "$(VC_DEMO_XAPI_APP).$(VC_NAMESPACE).govirto.com"
-      secretName: $(VC_DEMO_XAPI_APP)-$(VC_NAMESPACE)-tls
+      - "$(VC_DEMO_XAPI_APP).demo.govirto.com"
+      secretName: $(VC_DEMO_XAPI_APP)-demo-tls
   rules:
-  - host: $(VC_DEMO_XAPI_APP).$(VC_NAMESPACE).govirto.com
+  - host: $(VC_DEMO_XAPI_APP).demo.govirto.com
     http:
       paths:
       - backend:
