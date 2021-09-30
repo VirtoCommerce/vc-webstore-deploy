@@ -13,6 +13,12 @@ spec:
   volumeMode: Filesystem
   storageClassName: "blob-premium"
 ---
+$patch: delete
+kind: PersistentVolumeClaim
+apiVersion: v1
+metadata:
+  name: cms-content-volume
+---
 kind: PersistentVolumeClaim
 apiVersion: v1
 metadata:
