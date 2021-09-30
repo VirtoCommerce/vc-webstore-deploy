@@ -32,6 +32,10 @@ spec:
             - "echo START INIT $(date +%Y-%m-%d-%H-%M-%S)
             && python3 install-modules.py \"$MODULES_CONFIG\" /mnt/Modules/*
             && python3 installer.py $(ASSETS_URL) $(ASSETS_LOCATION)"
+          envFrom:
+          - configMapRef:
+              name: deployment-cm 
+
       containers:
         - name: vc-platform-web
           startupProbe:
@@ -52,8 +56,6 @@ spec:
               name: platform-cm
           - configMapRef:
               name: platform-overlay-config
-          - configMapRef:
-              name: deployment-cm 
 
   strategy:
     rollingUpdate:
