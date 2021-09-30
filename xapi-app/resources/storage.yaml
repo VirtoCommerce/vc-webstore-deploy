@@ -23,5 +23,4 @@ spec:
   resources:
     requests:
       storage: 200Mi
-  volumeName: ""
   storageClassName: "rook-nfs-share-delete"
