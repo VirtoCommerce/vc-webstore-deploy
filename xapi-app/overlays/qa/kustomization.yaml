@@ -35,6 +35,9 @@ patches:
 - patch: |-
     - op: remove
       path: /spec/volumeName
+    - op: replace
+      path: /spec/storageClassName 
+      value: rook-nfs-share-delete
   target:
     version: v1
     kind: PersistentVolumeClaim
