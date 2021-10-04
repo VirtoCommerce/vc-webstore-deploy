@@ -18,6 +18,7 @@ spec:
     - hosts:
       - demo.virtocommerce.com
       secretName: demo-storefront-tls
+    - hosts: 
       - admin-demo.virtocommerce.com
       secretName: demo-platform-tls
   rules:
