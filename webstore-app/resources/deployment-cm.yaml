@@ -210,11 +210,11 @@ data:
       {
         "Id": "VirtoCommerce.CustomerExportImport",
         "Repository": "VirtoCommerce/vc-module-customer-export-import",
-        "PackageUrl": "https://vc3prerelease.blob.core.windows.net/packages/VirtoCommerce.CatalogExportImport_1.0.0-alpha.62-vds-2923.zip"
+        "PackageUrl": "https://vc3prerelease.blob.core.windows.net/packages/VirtoCommerce.CustomerExportImport_1.0.0-pr-65-bfbd057a.zip"
       },
       {
         "Id": "VirtoCommerce.CatalogExportImport",
         "Repository": "VirtoCommerce/vc-module-catalog-export-import",
-        "PackageUrl": "https://vc3prerelease.blob.core.windows.net/packages/VirtoCommerce.CatalogExportImport_1.0.0-pr-17-401de856.zip"
+        "PackageUrl": "https://vc3prerelease.blob.core.windows.net/packages/VirtoCommerce.CatalogExportImport_1.0.0-alpha.62-vds-2923.zip"
       }
     ]
