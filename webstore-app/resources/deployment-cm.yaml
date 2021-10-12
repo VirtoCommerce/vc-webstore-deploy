@@ -215,6 +215,6 @@ data:
       {
         "Id": "VirtoCommerce.CatalogExportImport",
         "Repository": "VirtoCommerce/vc-module-catalog-export-import",
-        "PackageUrl": "https://vc3prerelease.blob.core.windows.net/packages/VirtoCommerce.CatalogExportImport_1.0.0-alpha.62-vds-2923.zip"
+        "PackageUrl": "https://vc3prerelease.blob.core.windows.net/packages/VirtoCommerce.CatalogExportImport_1.0.0-alpha.42.zip"
       }
     ]
