@@ -1,0 +1,53 @@
+apiVersion: kustomize.config.k8s.io/v1beta1
+kind: Kustomization
+namespace: demo
+namePrefix: xapi-app-
+commonLabels:
+  instance: xapi-app
+
+resources:
+- ../../resources
+
+configMapGenerator:
+- name: db-config
+  literals:
+    - VC_DB_HOST=vc-prod-dbserver.database.windows.net
+    - VC_DB=vc-prod-dbserver
+    - VC_DB_POOL=vc-prod-elasticpool
+    - VC_DB_USER=virto
+- name: platform-overlay-config
+  envs: 
+    - platform-overlay.env
+- name: storefront-overlay-config
+  envs: 
+    - storefront-overlay.env
+
+vars:
+- name: VC_DB_HOST
+  objref:
+    kind: ConfigMap
+    name: db-config
+    apiVersion: v1
+  fieldref:
+    fieldpath: data['VC_DB_HOST']
+- name: VC_DB
+  objref:
+    kind: ConfigMap
+    name: db-config
+    apiVersion: v1
+  fieldref:
+    fieldpath: data['VC_DB']
+- name: VC_DB_POOL
+  objref:
+    kind: ConfigMap
+    name: db-config
+    apiVersion: v1
+  fieldref:
+    fieldpath: data['VC_DB_POOL']
+- name: VC_DB_USER
+  objref:
+    kind: ConfigMap
+    name: db-config
+    apiVersion: v1
+  fieldref:
+    fieldpath: data['VC_DB_USER']

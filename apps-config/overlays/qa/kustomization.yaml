@@ -3,3 +3,5 @@ kind: Kustomization
 nameSuffix: -qa
 resources:
 - webstore-app.yaml
+- xapi-app.yaml
+#- webstore-qa2.yaml

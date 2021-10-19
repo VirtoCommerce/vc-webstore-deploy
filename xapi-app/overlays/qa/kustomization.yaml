@@ -1,9 +1,9 @@
 apiVersion: kustomize.config.k8s.io/v1beta1
 kind: Kustomization
 namespace: qa
-namePrefix: webstore-
+namePrefix: xapi-app-
 commonLabels:
-  instance: webstore
+  instance: xapi-app
 
 resources:
 - ../../resources
@@ -18,9 +18,6 @@ configMapGenerator:
 - name: platform-overlay-config
   envs: 
     - platform-overlay.env
-- name: storefront-overlay-config
-  envs: 
-    - storefront-overlay.env
 - name: vault-config
   literals:
     - VAULT_API_URL=http://vault-dev.vault-dev.svc.cluster.local:8200
@@ -36,31 +33,15 @@ patches:
     version: v1
     kind: Deployment
 - patch: |-
-    - op: add
-      path: /spec/csi
-      value:
-        driver: blob.csi.azure.com
-        readOnly: false
-        fsType: ext4 
-        volumeHandle: mc_aks-cluster-dev_aks-dev_westus#fusefdb1fe6c3d1c4b1d814#webstore-cms-content-qa
-    - op: add
-      path: /spec/csi/volumeAttributes
-      value: 
-        containername: webstore-cms-content-qa
-        skuName: Premium_LRS
-    - op: replace
-      path: /metadata/name
-      value: cms-content-qa
-  target:
-    version: v1
-    kind: PersistentVolume
-- patch: |-
-    - op: replace
+    - op: remove
       path: /spec/volumeName
-      value: webstore-cms-content-qa
+    - op: replace
+      path: /spec/storageClassName 
+      value: rook-nfs-share-delete
   target:
     version: v1
     kind: PersistentVolumeClaim
+
 
 vars:
 - name: VC_DB_HOST
@@ -98,4 +79,3 @@ vars:
     apiVersion: v1
   fieldref:
     fieldpath: data.VAULT_API_URL
-
