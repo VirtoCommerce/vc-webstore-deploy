@@ -9,26 +9,27 @@ metadata:
     nginx.ingress.kubernetes.io/default-backend: error-page
     nginx.ingress.kubernetes.io/proxy-buffering: "on"
     nginx.ingress.kubernetes.io/proxy-buffers-number: "16"
+    cert-manager.io/cluster-issuer: letsencrypt
     nginx.ingress.kubernetes.io/proxy-buffer-size: "64k"
-    cert-manager.io/cluster-issuer: letsencrypt-wild
-    nginx.ingress.kubernetes.io/enable-cors: "true"
+    nginx.ingress.kubernetes.io/configuration-snippet: |
+     rewrite ^/admin https://admin-demo.virtocommerce.com break;
 spec:
   tls:
+    - hosts:
+      - demo.virtocommerce.com
+      secretName: demo-storefront-tls
     - hosts: 
-      - "$(VC_STOREFRONT_SERVICE).$(VC_NAMESPACE).govirto.com"
-      secretName: $(VC_STOREFRONT_SERVICE)-$(VC_NAMESPACE)-tls
-    - hosts:   
-      - "$(VC_PLATFORM_SERVICE).$(VC_NAMESPACE).govirto.com"
-      secretName: $(VC_PLATFORM_SERVICE)-$(VC_NAMESPACE)-tls
+      - admin-demo.virtocommerce.com
+      secretName: demo-platform-tls
   rules:
-  - host: $(VC_STOREFRONT_SERVICE).$(VC_NAMESPACE).govirto.com
+  - host: demo.virtocommerce.com
     http:
       paths:
       - backend:
           serviceName: storefront
           servicePort: 80
         path: /
-  - host: $(VC_PLATFORM_SERVICE).$(VC_NAMESPACE).govirto.com
+  - host: admin-demo.virtocommerce.com
     http:
       paths:
       - backend:
