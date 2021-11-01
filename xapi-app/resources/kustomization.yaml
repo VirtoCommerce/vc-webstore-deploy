@@ -2,6 +2,7 @@ apiVersion: kustomize.config.k8s.io/v1beta1
 kind: Kustomization
 
 patchesStrategicMerge:
+- storage.yaml
 - storefront-deploy.yaml
 - platform-deploy.yaml
 - deployment-cm.yaml
@@ -17,10 +18,24 @@ resources:
 images:
 - name: docker.pkg.github.com/virtocommerce/vc-platform/platform
   newName: ghcr.io/virtocommerce/platform
-  newTag: 3.84.0-master-829e77f5
+  newTag: 3.80.0-alpha.12133-vds-2369-65d2d4ff
 - name: docker.pkg.github.com/virtocommerce/vc-storefront/storefront
   newName: ghcr.io/virtocommerce/demo-storefront
   newTag: 1.13.0-alpha.1034-vds-1513-68741f61
 - name: ghcr.io/virtocommerce/demo-xapi-app
   newName: ghcr.io/virtocommerce/demo-xapi-app
-  newTag: 1.0.0-pr-73-vds-2166-580bb6d8
+  newTag: 1.0.0-pr-73-vds-2166-4bd91f21
+
+configMapGenerator:
+- name: url-config
+  literals:
+    - VC_DEMO_XAPI_APP=xapi-app
+
+vars:
+- name: VC_DEMO_XAPI_APP
+  objref:
+    kind: ConfigMap
+    name: url-config
+    apiVersion: v1
+  fieldref:
+    fieldpath: data.VC_DEMO_XAPI_APP

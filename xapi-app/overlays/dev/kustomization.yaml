@@ -1,6 +1,6 @@
 apiVersion: kustomize.config.k8s.io/v1beta1
 kind: Kustomization
-namespace: qa
+namespace: dev
 namePrefix: webstore-
 commonLabels:
   instance: webstore
@@ -42,25 +42,15 @@ patches:
         driver: blob.csi.azure.com
         readOnly: false
         fsType: ext4 
-        volumeHandle: mc_aks-cluster-dev_aks-dev_westus#fusefdb1fe6c3d1c4b1d814#webstore-cms-content-qa
+        volumeHandle: mc_aks-cluster-dev_aks-dev_westus#fusefdb1fe6c3d1c4b1d814#webstore-cms-content-dev
     - op: add
       path: /spec/csi/volumeAttributes
       value: 
-        containername: webstore-cms-content-qa
+        containername: webstore-cms-content-dev
         skuName: Premium_LRS
-    - op: replace
-      path: /metadata/name
-      value: cms-content-qa
   target:
     version: v1
     kind: PersistentVolume
-- patch: |-
-    - op: replace
-      path: /spec/volumeName
-      value: webstore-cms-content-qa
-  target:
-    version: v1
-    kind: PersistentVolumeClaim
 
 vars:
 - name: VC_DB_HOST
@@ -98,4 +88,3 @@ vars:
     apiVersion: v1
   fieldref:
     fieldpath: data.VAULT_API_URL
-

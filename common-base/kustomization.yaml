@@ -32,14 +32,14 @@ vars:
 - name: VC_NAMESPACE
   objref:
     kind: Service
-    name: storefront
+    name: platform
     apiVersion: v1
   fieldref:
     fieldpath: metadata.namespace
 - name: VC_INSTANCE
   objref:
     kind: Service
-    name: storefront
+    name: platform
     apiVersion: v1
   fieldref:
     fieldpath: metadata.labels.instance

@@ -13,7 +13,7 @@ data:
     APPINSIGHTS_INSTRUMENTATIONKEY: "4122074c-f2ad-489b-811f-d557350fb644"
     Swagger__UI__Enabled: "false"
     PushNotifications__ForceWebSockets: "true"
-    PushNotifications__ScalabilityMode: "RedisBackplane"
+    PushNotifications__ScalabilityMode: "None"
     PushNotifications__HubUrl: "https://$(VC_PLATFORM_SERVICE).$(VC_NAMESPACE).govirto.com/pushNotificationHub"
     PushNotifications__RedisBackplane__ChannelName: "VirtoCommerceChannel-$(VC_PLATFORM_SERVICE)-$(VC_NAMESPACE)"
     AzureAd__Enabled: "true"
