@@ -10,12 +10,10 @@ data:
     Notifications__Smtp__Host: "smtp.sendgrid.net"
     Notifications__Smtp__Login: "apikey"
     Notifications__Smtp__Port: "587"
-    APPINSIGHTS_INSTRUMENTATIONKEY: "4122074c-f2ad-489b-811f-d557350fb644"
     Swagger__UI__Enabled: "false"
     PushNotifications__ForceWebSockets: "true"
     PushNotifications__ScalabilityMode: "RedisBackplane"
     PushNotifications__HubUrl: "https://$(VC_PLATFORM_SERVICE).$(VC_NAMESPACE).govirto.com/pushNotificationHub"
-    PushNotifications__RedisBackplane__ChannelName: "VirtoCommerceChannel-$(VC_PLATFORM_SERVICE)-$(VC_NAMESPACE)"
     AzureAd__Enabled: "true"
     Content__FileSystem__PublicUrl: https://$(VC_PLATFORM_SERVICE).$(VC_NAMESPACE).govirto.com/cms-content/
     Assets__FileSystem__PublicUrl: https://$(VC_PLATFORM_SERVICE).$(VC_NAMESPACE).govirto.com/cms-content/assets/
@@ -25,4 +23,3 @@ data:
     VirtoCommerce__LicensePublicKeyPath: app_data/VirtoCommerce_rsa.pub
     VirtoCommerce__LicensePrivateKeyPath: app_data/private.key
     VirtoCommerce__LocalUploadFolderPath: app_data/uploads
-    Search__ElasticSearch__Server: http://search-dev-es-http.elastic-system:9200
