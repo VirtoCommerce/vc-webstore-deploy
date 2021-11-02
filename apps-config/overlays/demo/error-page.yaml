@@ -1,22 +1,19 @@
 apiVersion: argoproj.io/v1alpha1
 kind: Application
 metadata:
-  name: webstore
+  name: error-page
   namespace: argocd
   finalizers:
     - resources-finalizer.argocd.argoproj.io
   annotations:
-    notifications.argoproj.io/subscribe.on-health-degraded.msteams-webstore: ""
-    notifications.argoproj.io/subscribe.on-sync-failed.msteams-webstore: ""
-  labels:
-    instance: webstore  
+    argocd.argoproj.io/manifest-generate-paths: .  
 spec:
   destination:
     namespace: demo
     server: https://kubernetes.default.svc
   project: prod-tenant
   source:
-    path: webstore-app/overlays/demo
+    path: error-page
     repoURL: https://github.com/VirtoCommerce/vc-webstore-deploy
     targetRevision: master
   syncPolicy:
