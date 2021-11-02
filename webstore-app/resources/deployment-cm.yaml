@@ -20,7 +20,7 @@ data:
       {
         "Id": "VirtoCommerce.Core",
         "Repository": "VirtoCommerce/vc-module-core",
-        "PackageUrl": "https://github.com/VirtoCommerce/vc-module-core/releases/download/3.25.0/VirtoCommerce.Core_3.25.0.zip"
+        "PackageUrl": "https://github.com/VirtoCommerce/vc-module-core/releases/download/3.26.0/VirtoCommerce.Core_3.26.0.zip"
       },
       {
         "Id": "VirtoCommerce.AzureSearch",
@@ -30,12 +30,12 @@ data:
       {
         "Id": "VirtoCommerce.Cart",
         "Repository": "VirtoCommerce/vc-module-cart",
-        "PackageUrl": "https://github.com/VirtoCommerce/vc-module-cart/releases/download/3.25.0/VirtoCommerce.Cart_3.25.0.zip"
+        "PackageUrl": "https://github.com/VirtoCommerce/vc-module-cart/releases/download/3.27.0/VirtoCommerce.Cart_3.27.0.zip"
       },
       {
         "Id": "VirtoCommerce.Catalog",
         "Repository": "VirtoCommerce/vc-module-catalog",
-        "PackageUrl": "https://github.com/VirtoCommerce/vc-module-catalog/releases/download/3.72.0/VirtoCommerce.Catalog_3.72.0.zip"
+        "PackageUrl": "https://github.com/VirtoCommerce/vc-module-catalog/releases/download/3.73.0/VirtoCommerce.Catalog_3.73.0.zip"
       },
       {
         "Id": "VirtoCommerce.Content",
@@ -45,7 +45,7 @@ data:
       {
         "Id": "VirtoCommerce.Customer",
         "Repository": "VirtoCommerce/vc-module-customer",
-        "PackageUrl": "https://github.com/VirtoCommerce/vc-module-customer/releases/download/3.34.0/VirtoCommerce.Customer_3.34.0.zip"
+        "PackageUrl": "https://github.com/VirtoCommerce/vc-module-customer/releases/download/3.35.0/VirtoCommerce.Customer_3.35.0.zip"
       },
       {
         "Id": "VirtoCommerce.ElasticSearch",
@@ -90,7 +90,7 @@ data:
       {
         "Id": "VirtoCommerce.Payment",
         "Repository": "VirtoCommerce/vc-module-payment",
-        "PackageUrl": "https://github.com/VirtoCommerce/vc-module-payment/releases/download/3.7.0/VirtoCommerce.Payment_3.7.0.zip"
+        "PackageUrl": "https://github.com/VirtoCommerce/vc-module-payment/releases/download/3.9.0/VirtoCommerce.Payment_3.9.0.zip"
       },
       {
         "Id": "VirtoCommerce.Pricing",
@@ -175,7 +175,7 @@ data:
       {
         "Id": "VirtoCommerce.Quote",
         "Repository": "VirtoCommerce/vc-module-quote",
-        "PackageUrl": "https://github.com/VirtoCommerce/vc-module-quote/releases/download/3.15.0/VirtoCommerce.Quote_3.15.0.zip"
+        "PackageUrl": "https://github.com/VirtoCommerce/vc-module-quote/releases/download/3.17.0/VirtoCommerce.Quote_3.17.0.zip"
       },
       {
         "Id": "VirtoCommerce.DynamicAssociations",
