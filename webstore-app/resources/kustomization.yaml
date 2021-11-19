@@ -20,7 +20,7 @@ images:
   newTag: 3.84.0-master-829e77f5
 - name: docker.pkg.github.com/virtocommerce/vc-storefront/storefront
   newName: ghcr.io/virtocommerce/demo-storefront
-  newTag: dev-linux-latest
+  newTag: 1.13.0-alpha.1042-dev-b42b8d9a
 - name: ghcr.io/virtocommerce/demo-xapi-app
   newName: ghcr.io/virtocommerce/demo-xapi-app
   newTag: 1.0.0-alpha.74-dev
