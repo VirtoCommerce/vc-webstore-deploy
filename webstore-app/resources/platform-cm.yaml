@@ -25,4 +25,4 @@ data:
     VirtoCommerce__LicensePublicKeyPath: app_data/VirtoCommerce_rsa.pub
     VirtoCommerce__LicensePrivateKeyPath: app_data/private.key
     VirtoCommerce__LocalUploadFolderPath: app_data/uploads
-    Search__ElasticSearch__Server: https://search-dev-es-http.elastic-system.svc.cluster.local
+    Search__ElasticSearch__Server: https://search-dev-es-http.elastic-system.svc.cluster.local:9200
