@@ -30,11 +30,11 @@ spec:
       - name: vc-storefront-web
         resources:
           limits:
-            cpu: 500m
+            cpu: 250m
             memory: 2Gi
           requests:
-            cpu: 250m
-            memory: 1Gi
+            cpu: 150m
+            memory: 1G
         readinessProbe:
           httpGet:
             path: /
