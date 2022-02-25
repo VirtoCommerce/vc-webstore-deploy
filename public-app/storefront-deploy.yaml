@@ -28,6 +28,13 @@ spec:
       - name: dockerconfigjson-github-com
       containers:
       - name: vc-storefront-web
+        resources:
+          limits:
+            cpu: 500m
+            memory: 2Gi
+          requests:
+            cpu: 250m
+            memory: 1Gi
         readinessProbe:
           httpGet:
             path: /

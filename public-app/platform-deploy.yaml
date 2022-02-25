@@ -41,6 +41,13 @@ spec:
             && python3 installer.py $(ASSETS_URL) $(ASSETS_LOCATION)"
       containers:
         - name: vc-platform-web
+          resources:
+            limits:
+              cpu: 500m
+              memory: 1Gi
+            requests:
+              cpu: 350m
+              memory: 512Mi
           readinessProbe:
             httpGet:
               path: /
