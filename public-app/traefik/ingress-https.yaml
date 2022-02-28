@@ -12,7 +12,7 @@ metadata:
     cert-manager.io/cluster-issuer: letsencrypt
     nginx.ingress.kubernetes.io/proxy-buffer-size: "64k"
     nginx.ingress.kubernetes.io/configuration-snippet: |
-     rewrite ^/admin https://admin-demo.virtocommerce.com break;
+     rewrite ^/admin https://public-platform.demo.govirto.com break;
 spec:
   tls:
     - hosts:
@@ -21,6 +21,12 @@ spec:
     - hosts: 
       - admin-demo.virtocommerce.com
       secretName: demo-platform-tls
+    - hosts:
+      - public-storefront.demo.govirto.com
+      secretName: public-storefront-tls
+    - hosts: 
+      - public-platform.demo.govirto.com
+      secretName: public-platform-tls
   rules:
   - host: demo.virtocommerce.com
     http:
@@ -30,6 +36,20 @@ spec:
           servicePort: 80
         path: /
   - host: admin-demo.virtocommerce.com
+    http:
+      paths:
+      - backend:
+          serviceName: platform
+          servicePort: 80
+        path: /
+  - host: public-storefront.demo.govirto.com
+    http:
+      paths:
+      - backend:
+          serviceName: storefront
+          servicePort: 80
+        path: /
+  - host: public-platform.demo.govirto.com
     http:
       paths:
       - backend:
