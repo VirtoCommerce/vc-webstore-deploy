@@ -16,32 +16,12 @@ metadata:
 spec:
   tls:
     - hosts:
-      - demo.virtocommerce.com
-      secretName: demo-storefront-tls
-    - hosts: 
-      - admin-demo.virtocommerce.com
-      secretName: demo-platform-tls
-    - hosts:
       - public-storefront.demo.govirto.com
       secretName: public-storefront-tls
     - hosts: 
       - public-platform.demo.govirto.com
       secretName: public-platform-tls
   rules:
-  - host: demo.virtocommerce.com
-    http:
-      paths:
-      - backend:
-          serviceName: storefront
-          servicePort: 80
-        path: /
-  - host: admin-demo.virtocommerce.com
-    http:
-      paths:
-      - backend:
-          serviceName: platform
-          servicePort: 80
-        path: /
   - host: public-storefront.demo.govirto.com
     http:
       paths:
