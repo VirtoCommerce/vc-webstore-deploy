@@ -19,4 +19,8 @@ spec:
             - "/bin/bash"
             - "-c"
           args:
-              - "dotnet VirtoCommerce.Platform.Web.dll"
+            - "dotnet VirtoCommerce.Platform.Web.dll"
+      volumes:
+      - name: cms-content-data
+        persistentVolumeClaim:
+          claimName: cms-content-volume-paas

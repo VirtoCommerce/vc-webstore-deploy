@@ -13,10 +13,23 @@ spec:
   volumeMode: Filesystem
   storageClassName: "blob-premium"
 ---
+$patch: delete
 kind: PersistentVolumeClaim
 apiVersion: v1
 metadata:
   name: cms-content-volume
+spec:
+  accessModes:
+    - ReadWriteMany
+  resources:
+    requests:
+      storage: 300Mi
+  storageClassName: "blob-paas-nfs"
+---
+kind: PersistentVolumeClaim
+apiVersion: v1
+metadata:
+  name: cms-content-volume-paas
 spec:
   accessModes:
     - ReadWriteMany

@@ -28,3 +28,7 @@ spec:
             limits:
               memory: "2048Mi"
               cpu: 500m
+      volumes:
+      - name: cms-content-data
+        persistentVolumeClaim:
+          claimName: cms-content-volume-paas
