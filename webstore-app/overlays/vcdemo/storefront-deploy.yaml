@@ -1,0 +1,30 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: storefront
+spec:
+  template:
+    spec:
+      affinity:
+        podAffinity:
+          requiredDuringSchedulingIgnoredDuringExecution:
+          - labelSelector:
+              matchExpressions:
+              - key: app
+                operator: In
+                values:
+                - platform
+              - key: instance
+                operator: In
+                values:
+                - webstore
+            topologyKey: topology.kubernetes.io/zone
+      containers:
+        - name: vc-storefront-web
+          resources:
+            requests:
+              memory: "512Mi"
+              cpu: 250m
+            limits:
+              memory: "2048Mi"
+              cpu: 500m

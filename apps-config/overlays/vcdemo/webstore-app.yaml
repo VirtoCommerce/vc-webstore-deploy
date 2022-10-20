@@ -1,0 +1,22 @@
+apiVersion: argoproj.io/v1alpha1
+kind: Application
+metadata:
+  name: webstore
+  namespace: argocd
+  finalizers:
+    - resources-finalizer.argocd.argoproj.io
+  labels:
+    instance: webstore  
+spec:
+  destination:
+    namespace: vcdemo
+    server: 'https://vc-managed-03-66bcb8f1.hcp.eastus.azmk8s.io:443'
+  project: prod-tenant
+  source:
+    path: webstore-app/overlays/vcdemo
+    repoURL: https://github.com/VirtoCommerce/vc-webstore-deploy
+    targetRevision: master
+  syncPolicy:
+    automated:
+      prune: true
+      selfHeal: true
