@@ -7,7 +7,7 @@ commonLabels:
 
 resources:
 - ../../resources
-- ngress-https-new.yaml
+- ingress-https-new.yaml
 
 patchesStrategicMerge:
 - storefront-deploy.yaml
