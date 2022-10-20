@@ -23,5 +23,4 @@ spec:
   resources:
     requests:
       storage: 300Mi
-  volumeName: cms-content
   storageClassName: "blob-paas-nfs"
