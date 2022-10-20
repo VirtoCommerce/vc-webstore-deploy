@@ -7,11 +7,15 @@ commonLabels:
 
 resources:
 - ../../resources
+- ngress-https-new.yaml
 
 patchesStrategicMerge:
 - storefront-deploy.yaml
 - platform-deploy.yaml
 - storefront-cm.yaml
+- middleware-redirect.yaml
+- ingress-https.yaml
+- xapi-deploy.yaml
 
 configMapGenerator:
 - name: db-config
@@ -35,7 +39,7 @@ patches:
     - op: add
       path: /spec/template/spec/nodeSelector
       value: 
-        agentpool: apool
+        agentpool: dev
   target:
     group: apps
     version: v1
