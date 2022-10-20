@@ -21,9 +21,9 @@ patchesStrategicMerge:
 configMapGenerator:
 - name: db-config
   literals:
-    - VC_DB_HOST=vc-prod-dbserver.database.windows.net
-    - VC_DB=vc-prod-dbserver
-    - VC_DB_POOL=vc-prod-elasticpool
+    - VC_DB_HOST=vc-managed-02-dbserver.database.windows.net
+    - VC_DB=vc-managed-02-dbserver
+    - VC_DB_POOL=main
     - VC_DB_USER=virto
 - name: platform-overlay-config
   envs: 
