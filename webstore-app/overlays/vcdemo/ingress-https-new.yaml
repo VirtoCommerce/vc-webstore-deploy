@@ -18,7 +18,7 @@ spec:
       secretName: $(VC_STOREFRONT_SERVICE)-$(VC_NAMESPACE)-tls
     - hosts:   
       - "webstore-platform.demo.govirto.com"
-      secretName: $(VC_PLATFORM_SERVICE)-$(VC_NAMESPACE)-tls-cloud
+      secretName: $(VC_PLATFORM_SERVICE)-$(VC_NAMESPACE)-tls-cloudnew
   rules:
   - host: webstore-storefront.demo.govirto.com
     http:
