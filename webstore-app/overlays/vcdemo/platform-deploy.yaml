@@ -31,6 +31,11 @@ spec:
                 secretKeyRef:
                   name: smtp-password
                   key: password
+            - name: Search__ElasticSearch__Key
+              valueFrom:
+                secretKeyRef:
+                  name: elastic
+                  key: password
       volumes:
       - name: cms-content-data
         persistentVolumeClaim:
