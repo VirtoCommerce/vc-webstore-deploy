@@ -18,6 +18,7 @@ patchesStrategicMerge:
 - ingress-https.yaml
 - xapi-deploy.yaml
 - storage.yaml
+- platform-cm.yaml
 
 configMapGenerator:
 - name: db-config
