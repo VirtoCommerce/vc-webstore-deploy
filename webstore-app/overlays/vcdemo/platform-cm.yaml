@@ -4,3 +4,5 @@ metadata:
   name: platform-cm
 data:
     PushNotifications__ScalabilityMode: "None"
+    AzureAd__ApplicationId: 80277d3d-4357-46f0-917f-334177695a0f
+    AzureAd__TenantId: bc03e660-5e3a-45c4-bf5c-b75489f78923

@@ -20,6 +20,17 @@ spec:
             - "-c"
           args:
             - "dotnet VirtoCommerce.Platform.Web.dll"
+          env:
+            - name: Notifications__SendGrid__ApiKey
+              valueFrom:
+                secretKeyRef:
+                  name: apikey
+                  key: apikey
+            - name: Notifications__Smtp__Password
+              valueFrom:
+                secretKeyRef:
+                  name: smtp-password
+                  key: password
       volumes:
       - name: cms-content-data
         persistentVolumeClaim:
